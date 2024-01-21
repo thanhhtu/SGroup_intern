@@ -82,10 +82,10 @@
 }
 
 .aboutMe{
+    display: inline-block;
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 2px;
-    width: 102px;
     padding-bottom: 5px;
     border-bottom: 3px solid #F26363;
     margin-bottom: 25px;
@@ -125,6 +125,7 @@
     float: right;
 }
 .skillName{
+    display: inline-block;
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 2px;
