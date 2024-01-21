@@ -1,0 +1,143 @@
+* {
+    font-family: Inter;
+    margin: 0;
+    padding: 0;
+}
+.title{
+    padding: 80px 110px;
+}
+
+.contentTitle{
+    font-size: 18px;
+    letter-spacing: 3px;
+    text-decoration: none; /* bỏ gạch chân khi link */
+    color: black;
+}
+
+.logoname{
+    font-weight: 700;
+    font-size: 20px;
+    color:rgb(255, 255, 255);
+    background-color: black;
+    padding: 9px 13px;
+    border-radius: 4px;
+}
+
+.icon{
+    font-size: 25px;
+    color:#F26363;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.intro, .textIntro{
+    padding: 0px 110px;
+    margin-bottom: 60px;
+}
+
+.img{
+    height: 70%;
+    width: 41%;
+    margin-right: 85px;
+}
+
+.firstIntro{
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;    /* new: lên trên */
+}
+
+.hi{
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 25px 0px 45px 0px;
+}
+
+.name{
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.experience{
+    list-style-type: none;  /* không có gạch chấm ở đầu khi list */
+    margin-top: 70px;
+}
+
+.experience li{
+    display: inline-block;
+    margin-right: 60px;
+}
+
+.number{
+    font-size: 36px;
+    font-weight: 800;
+    color:#F26363;
+}
+
+.characterUnderNumber{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.aboutMe{
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    width: 102px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #F26363;
+    margin-bottom: 25px;
+}
+
+.textAbout{
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 0.4px;
+    line-height: 1.5;
+    margin: 25px 0px 70px 0px;
+}
+
+.download{
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color:#F26363;
+    text-decoration: none;
+    padding: 15px 30px;
+    border: 2px solid #F26363;
+    border-radius: 60px;
+}
+
+.skill{
+    padding: 0px 110px;
+    margin-top: 110px;
+}
+
+.coreSkill{
+    display: inline-block;
+    width: 50%;
+}
+
+.otherSkill{
+    width: 50%;
+    float: right;
+}
+.skillName{
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #F26363;
+    margin-bottom: 25px;
+}
+
+.coreSkill li, .otherSkill li{
+    display: inline-block;
+    font-weight: 500;
+    margin: 7px 5px;
+    padding: 12px 20px;
+    border: 1px solid #D7D7D7;
+    border-radius: 60px;
+}
