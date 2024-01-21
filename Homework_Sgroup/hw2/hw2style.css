@@ -82,7 +82,7 @@
 }
 
 .aboutMe{
-    display: inline-block;
+display: inline-block;
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -117,12 +117,14 @@
 
 .coreSkill{
     display: inline-block;
-    width: 50%;
+    width: 45%;
+    margin-right: 50px;
 }
 
 .otherSkill{
-    width: 50%;
-    float: right;
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
 }
 .skillName{
     display: inline-block;
