@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.flex-container{
+    border: 1px solid black;
+    padding: 10px 30px;
+    width: 600px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    align-items: center;
+}
+
+ul li{
+    text-decoration: none;
+    list-style: none;
+}
+
+.item{
+    width: 80px;
+    height: 30px;
+    border: 1px solid black;
+    padding: 3px 10px;
+    background-color: aqua;
+}
+
+.item1{
+    background-color: rgb(218, 227, 39);
+}
+
+.item2{
+    background-color: rgb(184, 50, 153);
+}
+
+.item3{
+    background-color: rgb(227, 189, 39);
+}
