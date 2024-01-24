@@ -1,0 +1,31 @@
+.large-circle{
+    margin: 110px;
+    padding: 30px;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(51, 214, 214);
+    border-radius: 100%;
+    transition: all 2s ease 1s;
+}
+
+.small-circle{
+    position: absolute;
+    top: 250px;
+    left: 70px;
+    padding: 10px;
+    width: 80px;
+    height: 80px;
+    background-color: rgb(218, 53, 53);
+    border-radius: 100%;
+    transition: all 2s linear 0s;
+}
+
+.large-circle:hover{
+    transform: scale(2);
+    background-color: rgb(72, 179, 255);
+}
+
+.small-circle:hover{
+    transform: translateX(500px) rotate(360deg);
+    background-color: rgb(227, 203, 49);
+}
