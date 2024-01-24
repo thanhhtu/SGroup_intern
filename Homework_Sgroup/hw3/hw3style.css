@@ -222,3 +222,47 @@ ul.work-pos-detail{
     line-height: 1.5;
     margin-bottom: 50px;
 }
+
+.footer{
+    padding: 110px 0px;
+    background-color: black;
+    color: white;
+}
+
+.footer-stayintouch{
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    color: rgba(255,255,255,0.5);
+}
+
+.footer-readytotalk{
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 7px;
+    color: white;
+}
+
+.footer-free{
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    margin-bottom: 50px;
+    color: white;
+}
+
+.footer-cre{
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-top: 100px;
+    color: rgba(255,255,255,0.5);
+}
+
+.footer-link{
+    text-decoration: none;
+    color: rgba(255,255,255,0.5);
+}
+
+.footer-link:hover{
+    color: #F26363;
+}
