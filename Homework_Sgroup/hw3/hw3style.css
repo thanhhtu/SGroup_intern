@@ -153,7 +153,6 @@ ul{
 .work-time{
     font-size: 14px;
     font-weight: 600;
-    color:#373737;
     margin: 10px 0px;
 }
 
@@ -189,10 +188,11 @@ ul.work-pos-detail{
     padding-left: 5px;
 }
 
-/* .work-pos-detail li::maker{
-    color: red;
-    font-size: 30px;
-} */
+li::marker{
+    color: black;
+    font-size: 22px;
+    padding-top: 20px;
+}
 
 .project{
     padding: 40px 70px 0px;
