@@ -126,7 +126,7 @@ ul{
     margin-bottom: 70px;
 }
 
-.download, .details{
+.button-link{
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 3px;
@@ -137,7 +137,7 @@ ul{
     border-radius: 60px;
 }
 
-.download:hover, .details:hover{
+.button-link:hover{
     background-color:#F26363;
     color: white;
 }
