@@ -1,0 +1,271 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: Raleway;
+}
+
+.wrapper{
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2F3238;
+}
+
+/* .pic1{
+    width: 500px;
+    background-color: #3085a3;
+    position: relative;
+} */
+
+/* img{
+    width: 100%;
+    display: block;
+} */
+
+/* .text{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0);
+    position: absolute;
+    top: 50px;
+    left: 0;
+} */
+/*  
+.pic1{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 100px 100px;
+    background-color: #3085a3;
+    opacity: 0.8;
+    overflow: hidden;
+    transition: all 0.35s;
+}
+
+.photo{
+    position: absolute;
+    left: -40px;
+    transition: all 0.35s;
+    z-index: -1;
+}
+
+.text{
+    position: absolute;
+    top: 200px;
+    color: white;
+    
+    display: block;
+    z-index: 2;
+} */
+
+/*
+.pic1:hover{
+    opacity: 1;
+}
+
+.photo{
+    position: absolute;
+    left: -40px;
+    transition: all 0.35s;
+    z-index: 1;
+}
+
+.photo:hover{
+    transform: translateX(40px);
+
+}
+ */
+
+/*/////////////////////////////////*/
+.wrapper-pic1{
+    width: 450px;
+    border: 2px solid #2F3238;
+    overflow: hidden;
+    transition:all 0.35s ease-out;
+}
+.pic1{
+    width: 500px;
+    left: -50px;
+    position: relative;
+    background-color: #3085a3;
+    transition:all 0.35s ease-out;
+}
+
+.text1-nice{
+    font-size: 30px;
+    font-weight: 300;
+    transition: all 0.8s ease 0.2s;
+}
+
+.text1-lily{
+    font-size: 30px;
+    font-weight: 800;
+    transition: none;
+}
+
+.text1-para{
+    font-size: 15px;
+    font-weight: 200;
+    padding-top: 3px;
+    opacity: 0;
+    transition: all 1s ease 0.2s;
+}
+
+.text1{
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 110px;
+    left: 100px;
+    transition: none;
+}
+
+.pic1:hover{
+    transform: translateX(35px);
+    background-color: #2F3238;
+    opacity: 1;
+}
+
+.pic1:hover .text1-nice{
+    position: absolute;
+    top: 150px;
+    left: -20px;
+    transform: translateY(-35px);
+    opacity: 1;
+}
+
+.pic1:hover .text1-para{
+    position: absolute;
+    top: 180px;
+    left: -20px;
+    transform: translateY(-35px);
+    opacity: 1;
+}
+
+/*/////////////////////////////////*/
+
+.pic2{
+    width: 450px;
+    position: relative;
+    border: 2px solid #2F3238;
+    overflow: hidden;
+    background-color: #3085a3;
+}
+
+img{
+    width: 100%;
+    display: block;
+    position: relative;
+    opacity: 0.8;
+}
+
+.text2{
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.text2:hover{
+    opacity: 1;
+    transform: translateY(-103px);
+}
+
+.text2-para{
+    width: 350px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    padding-top: 220px;
+    opacity: 1;
+}
+
+.text2-name{
+    width: 100%;
+    padding: 20px;
+    color: #3c4a50;
+    background-color: white;
+    margin-top: 90px;
+    opacity: 0;
+}
+
+.text2:hover .text2-name{
+    opacity: 1;
+}
+
+.text2-logoname{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.text2-textname{
+    font-size: 30px;
+    font-weight: 300;
+    transition: all 0.4s ease 0.15s;
+}
+
+.text2:hover .text2-textname, .text2:hover .icon2 i{
+    transform: translateY(-55px);
+}
+
+.icon2{
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.icon2 i{
+    padding: 0px 10px;
+}
+
+/*/////////////////////////////////*/
+
+/* .pic3{
+    width: 450px;
+    position: relative;
+    border: 2px solid #2F3238;
+    overflow: hidden;
+}
+
+.text3{
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.text3-jolly{
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.text1-winston{
+    font-size: 30px;
+    font-weight: 800;
+} */
