@@ -15,96 +15,36 @@
     background-color: #2F3238;
 }
 
-/* .pic1{
-    width: 500px;
-    background-color: #3085a3;
-    position: relative;
-} */
-
-/* img{
+img{
     width: 100%;
     display: block;
-} */
-
-/* .text{
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0);
-    position: absolute;
-    top: 50px;
-    left: 0;
-} */
-/*  
-.pic1{
     position: relative;
-    width: 500px;
-    height: 500px;
-    margin: 100px 100px;
-    background-color: #3085a3;
     opacity: 0.8;
-    overflow: hidden;
-    transition: all 0.35s;
 }
 
-.photo{
-    position: absolute;
-    left: -40px;
-    transition: all 0.35s;
-    z-index: -1;
-}
-
-.text{
-    position: absolute;
-    top: 200px;
-    color: white;
-    
-    display: block;
-    z-index: 2;
-} */
-
-/*
-.pic1:hover{
-    opacity: 1;
-}
-
-.photo{
-    position: absolute;
-    left: -40px;
-    transition: all 0.35s;
-    z-index: 1;
-}
-
-.photo:hover{
-    transform: translateX(40px);
-
-}
- */
-
-/*/////////////////////////////////*/
+/* pic1 */
 .wrapper-pic1{
     width: 450px;
     border: 2px solid #2F3238;
     overflow: hidden;
-    transition:all 0.35s ease-out;
 }
+
 .pic1{
     width: 500px;
     left: -50px;
     position: relative;
     background-color: #3085a3;
-    transition:all 0.35s ease-out;
+    transition: all 0.4s ease 0.1s;
 }
 
 .text1-nice{
     font-size: 30px;
     font-weight: 300;
-    transition: all 0.8s ease 0.2s;
 }
 
 .text1-lily{
     font-size: 30px;
     font-weight: 800;
-    transition: none;
 }
 
 .text1-para{
@@ -112,7 +52,7 @@
     font-weight: 200;
     padding-top: 3px;
     opacity: 0;
-    transition: all 1s ease 0.2s;
+    transition: all 0.6s ease 0.1s;
 }
 
 .text1{
@@ -121,11 +61,14 @@
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
+    padding-left: 100px;
+    padding-bottom: 40px;
+    align-items: flex-start;
     position: absolute;
-    top: 110px;
-    left: 100px;
-    transition: none;
+    top: 0;
+    left: 0;
+    transition: all 0.4s ease 0.1s;
 }
 
 .pic1:hover{
@@ -134,37 +77,22 @@
     opacity: 1;
 }
 
-.pic1:hover .text1-nice{
-    position: absolute;
-    top: 150px;
-    left: -20px;
-    transform: translateY(-35px);
-    opacity: 1;
+.pic1:hover .text1{
+    transform: translate(-35px, -45px);
 }
 
 .pic1:hover .text1-para{
-    position: absolute;
-    top: 180px;
-    left: -20px;
-    transform: translateY(-35px);
     opacity: 1;
 }
+/* pic1 */
 
-/*/////////////////////////////////*/
-
+/* pic2 */
 .pic2{
     width: 450px;
     position: relative;
     border: 2px solid #2F3238;
     overflow: hidden;
     background-color: #3085a3;
-}
-
-img{
-    width: 100%;
-    display: block;
-    position: relative;
-    opacity: 0.8;
 }
 
 .text2{
@@ -229,20 +157,27 @@ img{
 
 .icon2{
     font-size: 20px;
-    font-weight: 200;
 }
 
 .icon2 i{
     padding: 0px 10px;
 }
+/* pic2 */
 
-/*/////////////////////////////////*/
-
-/* .pic3{
+/* pic3 */
+.pic3{
     width: 450px;
     position: relative;
     border: 2px solid #2F3238;
+    background-color: #83949b;
     overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.pic3:hover{
+    width: 450px;
+    background-color: white;
+    opacity: 1;
 }
 
 .text3{
@@ -251,21 +186,54 @@ img{
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0px;
+    left: 0px;
+    padding: 50px;
     transition: all 0.3s ease;
-    opacity: 0;
 }
 
-.text3-jolly{
+.text3-dark{
     font-size: 30px;
     font-weight: 300;
+    width: 100%;
+    padding-bottom: 4px;
 }
 
-.text1-winston{
+.text3-kira{
     font-size: 30px;
     font-weight: 800;
-} */
+}
+
+.icon3-logoname{
+    width: 100%;
+    border-top: 2px solid white;
+    transition: all 0.3s ease 0.1s;
+    opacity: 1;
+}
+
+.pic3:hover .icon3-logoname{
+    transform: translateY(20px);
+    background-color: white;
+    padding: 20px 20px 20px 0px;
+    opacity: 0.7;
+}
+
+.icon3{
+    font-size: 15px;
+    color: #101010;
+    margin-left: 20px;
+}
+
+.icon3 i{
+    padding: 0px 10px 0px;
+    opacity: 0;
+    transition: all 0.5s ease 0.2s;
+}
+
+.pic3:hover .icon3 i{
+    opacity: 1;
+}
+/* pic3 */
