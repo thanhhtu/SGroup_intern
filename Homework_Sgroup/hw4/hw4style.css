@@ -20,21 +20,14 @@ img{
     display: block;
     position: relative;
     opacity: 0.8;
-    transition: all 0.5s ease 0.2s;
-}
-
-/* pic1 */
-.wrapper-pic1{
-    width: 450px;
-    border: 2px solid #2F3238;
-    overflow: hidden;
+    transition: all 0.5s ease 0.1s;
 }
 
 .pic1{
-    width: 500px;
-    left: -50px;
+    width: 450px;
     position: relative;
     background-color: #3085a3;
+    overflow: hidden;
     transition: all 0.4s ease 0.1s;
 }
 
@@ -63,7 +56,7 @@ img{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-left: 100px;
+    padding-left: 50px;
     padding-bottom: 40px;
     align-items: flex-start;
     position: absolute;
@@ -73,17 +66,19 @@ img{
 }
 
 .pic1 img{
+    width: 500px;
+    left: -36px;
     opacity: 0.8;
 }
 
-.pic1:hover{
+.pic1:hover img{
     transform: translateX(35px);
     background-color: #2F3238;
     opacity: 1;
 }
 
 .pic1:hover .text1{
-    transform: translate(-35px, -45px);
+    transform: translateY(-45px);
 }
 
 .pic1:hover .text1-para{
