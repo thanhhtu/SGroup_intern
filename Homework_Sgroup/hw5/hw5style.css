@@ -7,7 +7,7 @@
 }
 
 .container{
-    margin: 0px 110px 110px 110px;
+    margin: 0px 110px 110px;
 }
 
 ul{
@@ -93,7 +93,7 @@ ul{
 
 .intro-text ul{
     margin-top: 70px;
-    width: 380px;
+    width: 70%;
 }
 
 .intro-exp-number{
@@ -229,6 +229,11 @@ li::marker{
     color: white;
 }
 
+.footer-content{
+    text-align: center;
+    margin: 0 8%;
+}
+
 .footer-stayintouch{
     font-size: 16px;
     font-weight: 700;
@@ -265,4 +270,119 @@ li::marker{
 
 .footer-link:hover{
     color: #F26363;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .container{
+        margin: 0 5%;
+    }
+    .intro-text ul{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .intro-text ul li{
+        padding-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .container{
+        margin: 0px 5%;
+    }
+
+    .header-name .jason-stroff{
+        display: none;
+    }
+
+    .intro, .skill, .work-exp, .project-app{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .intro-img{
+        width: 100%;
+        margin: 0;
+        padding: 10px 0px 30px;
+    }
+
+    .intro-text, .skill-detail, .work-detail, .project-app-detail, .project-img{
+        width: 100%;
+    }
+    
+    .intro-hi{
+        font-size: 16px;
+        margin: 25px 0px 15px;
+    }
+
+    .intro-name{
+        font-size: 30px;
+    }
+
+    .intro-text ul{
+        margin-top: 20px;
+    }
+
+    .intro-exp-number{
+        font-size: 30px;
+    }
+
+    .skill-detail ul{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .intro-exp-text, .skill-detail ul li, .footer-cre{
+        font-size: 14px;
+    }
+
+    .aboutme-text{
+        font-size: 15px;
+        margin-bottom: 50px;
+    }
+
+    .header{
+        margin-top: 0;
+    }
+
+    .topic{
+        padding-top: 40px;
+    }
+
+    .container-new-about{
+        padding-bottom: 40px;
+    }
+
+    .work-pos-detail li{
+        margin-left: 20px;
+    }
+
+    .project{
+        padding: 30px;
+    }
+
+    .project-app-detail{
+        padding: 0 0 40px;
+    }
+
+    .project-img{
+        padding: 0;
+    }
+
+    .footer{
+        padding: 60px 0px;
+    }
+
+    .footer-readytotalk{
+        font-size: 40px;
+    }
+
+    .footer-free{
+        margin: 8px 0 40px;
+    }
+
+    .footer-cre{
+        margin-top: 30px;
+    }
 }

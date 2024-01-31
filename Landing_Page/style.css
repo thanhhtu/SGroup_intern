@@ -3,7 +3,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: outfit;
-    color: white;
     background-color: black;
+    color: white;
+    font-family: outfit;
+}
+
+.header{
+    padding: 30px 25px;
 }
