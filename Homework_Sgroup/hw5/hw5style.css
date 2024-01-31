@@ -1,0 +1,268 @@
+* {
+    font-family: Inter;
+    margin: 0;
+    padding: 0;
+    border:0;
+    box-sizing: border-box;
+}
+
+.container{
+    margin: 0px 110px 110px 110px;
+}
+
+ul{
+    list-style: none;
+}
+
+.header{
+    position: sticky;
+    top: -1px; 
+    background-color: white;
+    padding: 30px 0px;
+    margin: 50px 0px;
+    border: 1px solid white;
+}
+
+.header-content, .header-social, .intro-text ul, .skill, .skill-detail ul, .work-exp, .project-app{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.skill, .work-exp, .skill-detail ul, .project-app{
+    align-items: flex-start;
+}
+
+.header-social{
+    width: 90px;
+}
+
+.header-name{
+    font-size: 18px;
+    letter-spacing: 3px;
+    text-decoration: none; /* bỏ gạch chân khi link */
+    color: black;
+}
+
+.header-logoname{
+    font-weight: 700;
+    font-size: 20px;
+    color:rgb(255, 255, 255);
+    background-color: black;
+    padding: 9px 13px;
+    border-radius: 4px;
+}
+
+.header-icon{
+    font-size: 25px;
+    color:#F26363;
+    text-decoration: none;
+}
+
+.header-icon:hover{
+    color: black;
+}
+
+.intro{
+    display: flex;
+}
+
+.intro-img{
+    height: 70%;
+    width: 41%;
+    margin-right: 88px;
+}
+
+.intro-text, .skill-detail, .work-detail{
+    width: 45%;
+}
+
+.intro-hi{
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 25px 0px 45px 0px;
+}
+
+.intro-name{
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.intro-text ul{
+    margin-top: 70px;
+    width: 380px;
+}
+
+.intro-exp-number{
+    font-size: 36px;
+    font-weight: 800;
+    color:#F26363;
+}
+
+.intro-exp-text{
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 8px;
+}
+
+.topic{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #F26363;
+    margin-bottom: 25px;
+}
+
+.aboutme-text{
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: 70px;
+}
+
+.button-link{
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color:#F26363;
+    text-decoration: none;
+    padding: 15px 30px;
+    border: 2px solid #F26363;
+    border-radius: 60px;
+}
+
+.button-link:hover{
+    background-color:#F26363;
+    color: white;
+}
+
+.skill-detail li{
+    font-weight: 500;
+    margin: 7px 5px;
+    padding: 12px 20px;
+    border: 1px solid #D7D7D7;
+    border-radius: 60px;
+}
+
+.work-time{
+    font-size: 14px;
+    font-weight: 600;
+    margin: 10px 0px;
+}
+
+.work-company{
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.work-pos{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.work-detail ul{
+    list-style-type: disc;
+}
+
+.work-pos-detail{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+ul.work-pos-detail{
+    margin-left: 15px;
+}
+
+.work-pos-detail li{
+    margin-bottom: 20px;
+    padding-left: 5px;
+}
+
+li::marker{
+    color: black;
+    font-size: 22px;
+    padding-top: 20px;
+}
+
+.project{
+    padding: 40px 70px 0px;
+    margin-bottom: 40px;
+    background-color: #F6F8FA;
+}
+
+.project-app-detail{
+    width: 55%;
+    padding: 20px 80px 70px 10px;
+}
+
+.project-img{
+    width: 41%;
+    padding: 0px 5px;
+}
+
+.project-title{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.project-describe{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 50px;
+}
+
+.footer{
+    padding: 110px 0px;
+    background-color: black;
+    color: white;
+}
+
+.footer-stayintouch{
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    color: rgba(255,255,255,0.5);
+}
+
+.footer-readytotalk{
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 7px;
+    color: white;
+}
+
+.footer-free{
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    margin-bottom: 50px;
+    color: white;
+}
+
+.footer-cre{
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-top: 100px;
+    color: rgba(255,255,255,0.5);
+}
+
+.footer-link{
+    text-decoration: none;
+    color: rgba(255,255,255,0.5);
+}
+
+.footer-link:hover{
+    color: #F26363;
+}
