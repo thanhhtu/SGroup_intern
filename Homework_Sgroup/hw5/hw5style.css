@@ -30,8 +30,13 @@ ul{
     flex-wrap: wrap;
 }
 
-.skill, .work-exp, .skill-detail ul, .project-app{
+.skill, .work-exp, .project-app{
     align-items: flex-start;
+}
+
+.skill-detail ul{
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .header-social{
@@ -334,11 +339,6 @@ li::marker{
         font-size: 30px;
     }
 
-    .skill-detail ul{
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
-
     .intro-exp-text, .skill-detail ul li, .footer-cre{
         font-size: 14px;
     }
@@ -398,5 +398,9 @@ li::marker{
 
     .footer-cre{
         margin-top: 30px;
+    }
+
+    .button-link{
+        padding: 11px 10px;
     }
 }
