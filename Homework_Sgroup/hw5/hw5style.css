@@ -23,7 +23,7 @@ ul{
     border: 1px solid white;
 }
 
-.header-content, .header-social, .intro-text ul, .skill, .skill-detail ul, .work-exp, .project-app{
+.flex-box, .intro-text ul, .skill-detail ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -272,10 +272,16 @@ li::marker{
     color: #F26363;
 }
 
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    .container{
+        margin: 0px 5% 110px;
+    }
+}
 @media only screen and (min-width: 768px) and (max-width: 991px){
     .container{
-        margin: 0 5%;
+        margin: 0 5% 110px;
     }
+
     .intro-text ul{
         flex-direction: column;
         justify-content: flex-start;
@@ -346,12 +352,16 @@ li::marker{
         margin-top: 0;
     }
 
+    .container-new-about{
+        padding-bottom: 40px;
+    }
+
     .topic{
         padding-top: 40px;
     }
 
-    .container-new-about{
-        padding-bottom: 40px;
+    .topic-new{
+        padding-top: 0;
     }
 
     .work-pos-detail li{
