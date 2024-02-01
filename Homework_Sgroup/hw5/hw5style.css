@@ -356,6 +356,10 @@ li::marker{
         padding-bottom: 40px;
     }
 
+    .lexind{
+        padding-top: 20px;
+    }
+
     .topic{
         padding-top: 40px;
     }
