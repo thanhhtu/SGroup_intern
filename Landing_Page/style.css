@@ -4,6 +4,8 @@
     margin: 0;
     box-sizing: border-box;
     font-family: outfit;
+    box-sizing: border-box;
+    letter-spacing: 1px;
 }
 ul{
     list-style: none;
@@ -25,7 +27,7 @@ a{
 .header{
     max-width: 1520px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 
 .flex-box{
@@ -37,6 +39,11 @@ a{
 
 .header-text{
     font-weight: 600;
+}
+
+.header-icon{
+    max-height: 65px;
+    vertical-align: middle;
 }
 
 .header-detail{
@@ -88,6 +95,8 @@ a{
     border-radius: 5px;
     color: white;
     font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1;
     text-align: center;
     transition: all 0.4s ease;
 }
@@ -95,6 +104,14 @@ a{
 .box-buynow:hover{
     background-color: #564DCA;
     border-color: #564DCA;
+}
+
+.header-bar{
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    margin-left: 40px;
 }
 
 /* header-area */
