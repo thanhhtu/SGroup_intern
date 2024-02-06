@@ -15,7 +15,20 @@
     .header-detail li{
         padding: 40px 40px 40px 0px;
     }
+
+    .box-buynow{
+        padding: 16px 35px;
+    }
     /* header-area */
+
+    /* main-area */
+    /* banner-area */
+    .header-icon{
+        max-height: 65px;
+    }
+    
+    /* banner-area */
+    /* main-area */
 }
 
 @media only screen and (max-width: 1199.98px){

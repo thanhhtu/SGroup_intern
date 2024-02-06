@@ -17,6 +17,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!--font-->
 
     <!--icon-->
@@ -26,15 +29,15 @@
 <body>
     <div class="container">
         <!--header-area-->
-        <header class="header-area">
-            <div class="header"> <!---->
+        <header class="header-area"> <!--absolute 3-->
+            <div class="header"> 
                 <div class="flex-box">
                     <div class="flex-box header-text">
                         <a href="index.html"><img src="https://themedox.com/demo/bigtech-live/bigtech/assets/img/logo/logo.png" alt="icon logo" class="header-icon"></a>
                         <ul class="flex-box header-detail">
                             <li>HOME</li>
                             <li>ABOUT US</li>
-                            <li>ROAD MAP</li>
+                            <li>ROADMAP</li>
                             <li>FAQ</li>
                             <li>BLOG</li>
                             <li>CONTACT US</li>
@@ -42,10 +45,10 @@
                     </div>
                     <div class="flex-box header-text">
                         <div class="flex-box header-language">
-                            <p class="header-lang">ENG</p>
+                            <p class="header-lang">ENG</p>  <!--relative-->
                             <i class="fa-solid fa-angle-down header-lang-icon"></i>
                         </div>
-                        <div class="header-button">
+                        <div class="header-button"> <!--relative, before: absolute-->
                             <a href="#" class="box-buynow">BUY NOW</a>
                         </div>
                         <!--media: 991.98 and less-->
@@ -58,6 +61,27 @@
             </div>
         </header>
         <!--header-area-->
+
+        <!--main-area-->
+        <main>
+            <!--banner-area-->
+            <section class="banner-area">   <!--relative-->
+                <div class="banner-bgr"></div> <!--absolute 1, before: absolute 2-->
+                <div class="banner-intro">  <!--relative 2-->
+                    <div class="flex-box banner-content">
+                        <div class="banner-text">World’s Biggest ICO Cryptocurrency Platform for you</div>
+                        <img src="https://themedox.com/demo/bigtech-live/bigtech/assets/img/banner/banner_img.png" alt="tablet pic">
+                    </div>
+                </div>
+                <div>   <!--social icon and scroll down-->
+                    <ul></ul>
+                    <div></div>
+                </div>
+            </section>
+            <!--banner-area-->
+
+        </main>
+        <!--main-area-->
         
     </div>
 </body>
