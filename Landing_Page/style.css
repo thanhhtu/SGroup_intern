@@ -19,13 +19,6 @@ img{
     vertical-align: middle;
 }
 
-li{
-    transition: all 0.35s;
-}
-
-li:hover{
-    color: #00C4F4;
-}
 /* header-area */
 .header-area{
     width: 100%;
@@ -65,19 +58,26 @@ li:hover{
     padding: 40px 65px 40px 0px;
 }
 
+.header-detail li > a{
+    color: white;
+    transition: all 0.35s;
+}
+
+.header-detail li > a:hover{
+    color: #00C4F4;
+}
+
 .header-lang{
     font-size: 16px;
     font-weight: 400;
 }
 
 .header-lang-icon{
-    display: block;
-    font-weight: 700;
     color: #00C4F4;
     margin-left: 10px;
-    font-size: 16;
     position: relative;
     top: 1px;
+    cursor: pointer;
 }
 
 .header-button{
@@ -183,6 +183,7 @@ li:hover{
 }
 
 .banner-icon-scroll{
+    align-items: flex-end;
     margin: 0 40px 0 100px;
     position: absolute;
     left: 0;
@@ -191,16 +192,27 @@ li:hover{
     z-index: 2;
 }
 
-/*social icon*/
-.banner-icon{
-    flex-direction: column;
+.banner-icon li{ 
+    margin-bottom: 25px;
+    border: 1px solid #F3F3F3;
+    border-radius: 50px;
+
+    display: flex;  /*flex canh chữ khi làm js ấn vô có chũ bay ra đó*/
+    align-items: center;
 }
 
-/* .banner-icon li{
-    margin-bottom: 25px;
-} */
+.banner-icon p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0 12px;
+    color: #081A39;
+    font-size: 15px;
+    cursor: pointer;
+}
 
-/*scroll*/
 .banner-scroll{
     flex-direction: column;
 }
@@ -213,6 +225,10 @@ li:hover{
     font-weight: 600;
     letter-spacing: 0.515em;
     transform: rotate(-90deg);
+}
+
+.banner-scroll a{
+    margin: 0;
 }
 /* banner-area */
 /* main-area */
