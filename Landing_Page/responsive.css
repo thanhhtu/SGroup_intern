@@ -1,13 +1,17 @@
 @media only screen and (max-width: 1500px){
     /* header-area */
     .header-area{
-        padding: 10px 0px;
+        padding: 8px 0px; /*10 0*/
     }
 
     .header{
         max-width: 1250px;
     }
 
+    .header-icon{
+        max-height: 65px;
+    }
+    
     .header-detail{
         margin-left: 100px;
     }
@@ -16,17 +20,47 @@
         padding: 40px 40px 40px 0px;
     }
 
-    .box-buynow{
-        padding: 16px 35px;
+    .header-button{
+        padding-left: 35px;
+        margin-left: 35px;
+    }
+
+    .header-button::before{
+        height: 20px;
+        width: 3px;
+        opacity: 0.4;
+    }
+
+    .header-box-buynow{
+        padding: 16.5px 36px; /*16 35*/
     }
     /* header-area */
 
     /* main-area */
     /* banner-area */
-    .header-icon{
-        max-height: 65px;
+    .banner-area{
+        padding-top: 180px;
     }
-    
+
+    .banner-bgr{
+        height: calc(100% - 115px);
+    }
+
+    .banner-bgr::before{
+        height: 600px;
+    }
+
+    .banner-text{
+        margin-bottom: 50px;    
+    }
+
+    .banner-content img{
+        max-width: 700px;
+    }
+
+    .banner-icon-scroll{
+        margin: 0 0px 0 55px;
+    }
     /* banner-area */
     /* main-area */
 }
@@ -54,6 +88,38 @@
         margin-left: 0px;
     }
     /* header-area */
+
+    /* main-area */
+    /* banner-area */
+    .banner-area{
+        padding-top: 170px;
+    }
+
+    .banner-bgr{
+        height: calc(100% - 100px);
+    }
+
+    .banner-bgr::before{
+        height: 480px;
+    }
+
+    .banner-intro{
+        max-width: 960px;
+    }
+
+    .banner-text{
+        font-size: 45px;
+    }
+
+    .banner-content img{
+        max-width: 600px;
+    }
+
+    .banner-icon-scroll{
+        display: none;
+    }
+    /* banner-area */
+    /* main-area */
 }
 
 @media only screen and (max-width: 991.98px){
@@ -74,6 +140,31 @@
         display: block;
     }
     /* header-area */
+
+    /* main-area */
+    /* banner-area */
+    .banner-area{
+        padding-top: 150px;
+    }
+
+    .banner-bgr{
+        height: calc(100% - 120px);
+    }
+
+    .banner-bgr::before{
+        height: 400px;
+    }
+
+    .banner-intro{
+        max-width: 720px;
+    }
+
+    .banner-text{
+        font-size: 55px;
+        line-height: 1.2;
+    }
+    /* banner-area */
+    /* main-area */
 }
 
 @media only screen and (max-width: 767.98px){
@@ -82,6 +173,31 @@
         display: none;
     }
     /* header-area */
+
+    /* main-area */
+    /* banner-area */
+    .banner-area{
+        padding-top: 130px;
+    }
+
+    .banner-bgr{
+        height: calc(100% - 95px);
+    }
+
+    .banner-bgr::before{
+        height: 260px;
+        background-position: bottom;
+    }
+
+    .banner-text{
+        font-size: 32px;
+    }
+
+    .banner-content img{
+        max-width: 100%;
+    }
+    /* banner-area */
+    /* main-area */
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px){
@@ -90,4 +206,17 @@
         max-width: 540px;
     }
     /* header-area */
+
+    /* main-area */
+    /* banner-area */
+    .banner-intro{
+        max-width: 540px;
+    }
+
+    .banner-text{
+        font-size: 40px;
+    }
+
+    /* banner-area */
+    /* main-area */
 }
