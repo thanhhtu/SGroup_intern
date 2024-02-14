@@ -16,8 +16,12 @@
         margin-left: 100px;
     }
 
-    .header-detail li{
-        padding: 40px 40px 40px 0px;
+    .header-detail > li{
+        margin-right: 40px;
+    }
+
+    .header-list-lang > li{
+        font-size: 15px;
     }
 
     .header-button{
@@ -75,11 +79,11 @@
         margin-left: 60px;
     }
 
-    .header-detail li{
-        padding: 36px 40px 36px 0px;
+    .header-detail > li{
+        padding: 36px 0px;
     }
 
-    .header-language{
+    .header-lang{
         display: none;
     }
 

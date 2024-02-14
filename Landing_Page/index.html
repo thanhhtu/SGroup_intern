@@ -29,14 +29,22 @@
 <body>
     <div class="container">
         <!--header-area-->
-        <header class="header-area"> <!--absolute 3-->
+        <header class="header-area" id="home-header"> <!--absolute 3-->
             <div class="header"> 
                 <div class="flex-box">
                     <div class="flex-box header-text">
                         <a href="index.html"><img src="https://themedox.com/demo/bigtech-live/bigtech/assets/img/logo/logo.png" alt="icon logo" class="header-icon"></a>
                         <ul class="flex-box header-detail">
-                            <li>
-                                <a href="#">HOME</a>
+                            <li  class="header-menu">
+                                <a href="#home-header">HOME</a>
+                                <ul class="header-sub-menu">
+                                    <li>
+                                        <a href="https://themedox.com/demo/bigtech-live/bigtech/index.html">HOME ONE</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html">HOME TWO</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="#">ABOUT US</a>    <!--#aboutme-->
@@ -47,8 +55,16 @@
                             <li>
                                 <a href="#">FAQ</a>     <!--#faq-->
                             </li>
-                            <li>
-                                <a href="#">BLOG</a>
+                            <li  class="header-menu">
+                                <a href="https://themedox.com/demo/bigtech-live/bigtech/blog.html">BLOG</a>
+                                <ul class="header-sub-menu">
+                                    <li>
+                                        <a href="https://themedox.com/demo/bigtech-live/bigtech/blog.html">OUR BLOG</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://themedox.com/demo/bigtech-live/bigtech/blog-details.html">BLOG DETAILS</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="#">CONTACT US</a>  <!--#contactus-->
@@ -56,9 +72,15 @@
                         </ul>
                     </div>
                     <div class="flex-box header-text">
-                        <div class="flex-box header-language">
-                            <p class="header-lang">ENG</p>  <!--relative-->
-                            <i class="fa-solid fa-angle-down header-lang-icon"></i>
+                        <div class="flex-box header-lang">  <!--relative-->
+                            <p class="header-selected-lang">ENG</p>
+                            <ul class="header-list-lang">   <!--absolute-->
+                                <li>IND</li>
+                                <li>BNG</li>
+                                <li>TUR</li>
+                                <li style="margin-bottom: 0;">CIN</li>
+                            </ul>
+                            <i class="fa-solid fa-angle-down header-lang-icon"></i> <!--relative-->
                         </div>
                         <div class="header-button"> <!--relative, before: absolute-->
                             <a href="#" class="header-box-buynow">BUY NOW</a>
