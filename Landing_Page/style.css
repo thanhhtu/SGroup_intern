@@ -19,6 +19,13 @@ img{
     vertical-align: middle;
 }
 
+.flex-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 /* header-area */
 .header-area{
     width: 100%;
@@ -35,18 +42,11 @@ img{
     padding: 0 15px;
 }
 
-.flex-box{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
 .header-text{
     font-weight: 600;
 }
 
-.header-icon{
+.header-logo{
     max-width: 100%;
 }
 
@@ -311,4 +311,53 @@ img{
     margin: 0;
 }
 /* banner-area */
+
+/* countdown-area */
+.countdown{
+    max-width: 1200px;
+    padding: 0px 15px;
+    margin: 0 auto;
+}
+
+.countdown-box{
+    padding: 55px 50px 60px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 34px 35px rgba(160, 171, 191, 0.21);
+    border-radius: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.countdown-box::before{
+    content: "";
+    width: 80%;
+    height: 80%;
+    background-color: #00C4F4;
+    opacity: 0.08;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.countdown-title{
+    margin-bottom: 35px;
+    color: #030B15;
+    font-family: "Poppins";
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.88;
+}
+
+.countdown-clock{
+    margin-bottom: 0;
+    /* justify-content: center;
+    column-gap: 115px;
+    row-gap: 30px; */
+}
+/* countdown-area */
+
 /* main-area */
