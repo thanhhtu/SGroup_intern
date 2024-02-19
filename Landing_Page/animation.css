@@ -1,0 +1,31 @@
+@keyframes FadeInDown{
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes SwingBackAndForth{   /*about-shape-one*/
+    from{
+        transform: rotateX(0deg) translateX(0px);
+    }
+
+    to{
+        transform: rotateX(0deg) translateX(50px);
+    }
+}
+
+@keyframes Rotate{  /*about-shape-two*/
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}

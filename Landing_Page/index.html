@@ -11,6 +11,7 @@
     <!--CSS-->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="animation.css">
     <!--CSS-->
 
     <!--font-->
@@ -30,7 +31,7 @@
     <div class="container">
         <!--header-area-->
         <header id="id-header-area" class="header-area"> <!--absolute 3-->
-            <div class="header"> 
+            <div class="container-box header"> 
                 <div class="flex-box">
                     <div class="flex-box header-text">
                         <a href="index.html"><img src="https://themedox.com/demo/bigtech-live/bigtech/assets/img/logo/logo.png" alt="icon logo" class="header-logo"></a>
@@ -47,7 +48,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="#">ABOUT US</a>    <!--#aboutme-->
+                                <a href="#id-about-area">ABOUT US</a>
                             </li>
                             <li>
                                 <a href="#">ROADMAP</a>     <!--#roadmap-->
@@ -83,7 +84,7 @@
                             <i class="fa-solid fa-angle-down header-lang-icon"></i> <!--relative-->
                         </div>
                         <div class="header-button"> <!--relative, before: absolute-->
-                            <a href="#" class="header-box-buynow">BUY NOW</a>
+                            <a href="#" class="button header-box-buynow">BUY NOW</a>
                         </div>
                         <!--media: 991.98 and less-->
                         <div class="header-bar">
@@ -101,10 +102,10 @@
             <!--banner-area-->
             <section class="banner-area">   <!--relative-->
                 <div class="banner-bgr"></div> <!--absolute 1, before: absolute 2-->
-                <div class="banner-intro">  <!--relative 2-->
+                <div class="container-box banner-intro">  <!--relative 2-->
                     <div class="flex-box banner-content">
-                        <div class="banner-text">World’s Biggest ICO Cryptocurrency Platform for you</div>
-                        <img src="https://themedox.com/demo/bigtech-live/bigtech/assets/img/banner/banner_img.png" alt="tablet pic">
+                        <div class="banner-text banner-text-animation">World’s Biggest ICO Cryptocurrency Platform for you</div>
+                        <img src="https://themedox.com/demo/bigtech-live/bigtech/assets/img/banner/banner_img.png" alt="tablet image">
                     </div>
                 </div>
                 <div class="flex-box banner-icon-scroll">   <!--social icon and scroll down--> <!--absolute 2-->
@@ -124,7 +125,7 @@
                     </ul>
                     <div class="flex-box banner-scroll">   <!--scroll down-->
                         <p>SCROLL DOWN</p>
-                        <a href="#"><img src="https://themedox.com/demo/bigtech-live/bigtech/assets/img/icon/scroll_icon.svg" alt="scroll pic"></a>     <!--#raboutme-->
+                        <a href="#id-about-area"><img src="https://themedox.com/demo/bigtech-live/bigtech/assets/img/icon/scroll_icon.svg" alt="scroll image"></a>
                     </div>
                 </div>
             </section>
@@ -132,7 +133,7 @@
 
             <!--countdown-area--> <!--làm clock sau-->
             <section id="id-countdown-area" class="countdown-area">
-                <div class="countdown">
+                <div class="container-box countdown">
                     <div class="countdown-box"> <!--relative--> <!--before: absolute -1-->
                         <div class="countdown-title">ICO Will Start In..</div>
                         <div class="flex-box countdown-clock">
@@ -147,8 +148,38 @@
             <!--countdown-area-->
 
             <!--about-area-->
-            <section id="id-about-area">
-
+            <section id="id-about-area" class="about-area"> <!--relative-->
+                <div class="container-box about">   <!--bao trùm-->
+                    <div class="flex-box">  <!--flex-->
+                        <div class="about-content"> <!--flex1-->
+                            <div class="about-img-animation">   <!--animation-->
+                                <img src="https://themedox.com/demo/bigtech-live/bigtech/assets/img/images/h2_about_img.png" alt="phone image">
+                            </div>
+                        </div>
+                        <div class="about-content"> <!--flex2-->
+                            <div>   <!--animation-->
+                                <p class="about-sub-title">ABOUT CRYPTO ICO</p>
+                                <p class="about-title">Bigtech Theme Is The Best For Your ICO</p>
+                                <p class="about-body-under-title">The World’s 1st ICO Platform That Offers Rewards and The platform helps investors to make easy</p>
+                                <ul>
+                                    <li>
+                                        <i class="fa-solid fa-check"></i>
+                                        <p>Mouthwatering leading how real formula also</p>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-check"></i>
+                                        <p>Locked-in have can mountain thought</p>
+                                    </li>
+                                </ul>
+                                <a href="h2_about_img.png" download="about-phone-img" target="_blank" class="button about-download-button">DOWNLOAD DOCUMENT</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-shape">   <!--mấy icon đung đưa xoay xoay-->
+                    <img src="https://themedox.com/demo/bigtech-live/bigtech/assets/img/images/about_shape01.png" alt="image of 3 stripes which swing back and forth" class="about-shape-one">
+                    <img src="https://themedox.com/demo/bigtech-live/bigtech/assets/img/images/about_shape02.png" alt="image of rotating spring" class="about-shape-two">
+                </div>
             </section>
             <!--about-area-->
 

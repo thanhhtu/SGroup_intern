@@ -5,7 +5,6 @@
     box-sizing: border-box;
     font-family: "Outfit";
     box-sizing: border-box;
-    letter-spacing: 1px;
 }
 ul{
     list-style: none;
@@ -19,6 +18,11 @@ img{
     vertical-align: middle;
 }
 
+.container-box{
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
 .flex-box{
     display: flex;
     justify-content: space-between;
@@ -26,11 +30,23 @@ img{
     flex-wrap: wrap;
 }
 
+.button{
+    box-shadow: 0px 6px 22px rgba(6, 34, 51, 0.22);
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
 /* header-area */
 .header-area{
     width: 100%;
     padding: 28px 0px;  /*30 0*/
     color: white;
+    letter-spacing: 1px;
     font-size: 14px;
     position: absolute;
     z-index: 3;
@@ -38,8 +54,6 @@ img{
 
 .header{
     max-width: 1520px;
-    margin: 0 auto;
-    padding: 0 15px;
 }
 
 .header-text{
@@ -183,13 +197,6 @@ img{
     padding: 20.5px 46px; /*20 45*/
     background-color: #00C4F4;
     border: 1px solid #00C4F4;
-    border-radius: 5px;
-    color: white;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    line-height: 1;
-    text-align: center;
-    transition: all 0.4s ease;
 }
 
 .header-box-buynow:hover{
@@ -240,8 +247,6 @@ img{
 
 .banner-intro{
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
     position: relative;
     z-index: 2;
 }
@@ -260,6 +265,19 @@ img{
     font-size: 55px;
     font-weight: 600;
     letter-spacing: -0.01em;    
+}
+
+.banner-text-animation{
+    animation-name: FadeInDown;
+    animation-delay: 2s;
+    opacity: 0;
+    animation-duration: 2s;
+
+    /* animation-name: FadeInDown;
+    animation-duration: 2s;
+    animation-delay: 5s;
+    visibility: visible; */
+    /* animation-iteration-count: infinite; */
 }
 
 .banner-icon-scroll{
@@ -315,8 +333,6 @@ img{
 /* countdown-area */
 .countdown{
     max-width: 1200px;
-    padding: 0px 15px;
-    margin: 0 auto;
 }
 
 .countdown-box{
@@ -360,4 +376,98 @@ img{
 }
 /* countdown-area */
 
+/*about-area*/
+.about-area{
+    padding: 130px 0;
+    position: relative;
+}
+
+.about{
+    max-width: 1200px;
+    padding: 0;
+}
+
+.about-content{
+    width: 50%;
+    padding: 0px 15px;
+    line-height: 1.75;
+
+}
+
+.about-img-animation{
+    animation-name: LeftToRight;
+    animation-delay: 0.2s;
+    text-align: center;
+}
+
+.about-img-animation img{
+    max-width: 100%;
+}
+
+.about-sub-title{
+    margin-bottom: 18px;
+    color: #564DCA;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-decoration: underline;
+    cursor: text;
+}
+
+.about-title{
+    margin-bottom: 15px;
+    font-family: "Poppins";
+    font-size: 45px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.26;
+}
+
+.about-body-under-title{
+    width: 80%;
+    margin-bottom: 20px;
+    color: #727885;
+    font-size: 16px;
+}
+
+.about-content ul{
+    margin-bottom: 45px;
+}
+
+.about-content ul li{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+
+.about-content ul li > i{
+    margin-right: 10px;
+    color: #564DCA;
+}
+
+.about-download-button{
+    display: inline-block;
+    background-color: #564DCA;
+    border-radius: 5px;
+    padding: 25px 42px;
+    font-size: 15px;
+}
+
+.about-shape > img{
+    position: absolute;
+}
+
+.about-shape-one{
+    left: 9%;
+    bottom: 90px;
+    animation: SwingBackAndForth 4s linear infinite alternate;
+}
+
+.about-shape-two{
+    right: 7%;
+    bottom: 22%;
+    animation: Rotate 10s infinite linear;
+}
+/*about-area*/
 /* main-area */
