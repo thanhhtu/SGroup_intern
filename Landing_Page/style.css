@@ -481,4 +481,138 @@ img{
     animation: Rotate 10s infinite linear;
 }
 /*about-area*/
+
+/*choose-area*/
+.choose-area{
+    padding: 130px 0 218px;
+}
+
+.choose-bgr{
+    background-image: url("https://themedox.com/demo/bigtech-live/bigtech/assets/img/bg/choose_bg.jpg");
+    background-size: cover; /* vừa vs background container, nếu dư thì cắt bớt*/
+    background-position: top;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.choose-bgr::before{
+    content: "";
+    background-image: url("https://themedox.com/demo/bigtech-live/bigtech/assets/img/bg/choose_shape01.png");
+    background-position: center;
+    background-repeat: repeat;
+    width: 100%;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.choose-bgr::after{
+    content: "";
+    background-image: url("https://themedox.com/demo/bigtech-live/bigtech/assets/img/bg/choose_shape02.png");
+    background-position: center;
+    background-repeat: repeat;
+    width: 100%;
+    height: 19px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.choose{
+    max-width: 1200px;
+    padding: 0;
+    line-height: 1.75;
+}
+
+.choose-one-flex-box{
+    justify-content: center;
+}
+
+.choose-one-flex-box > div{
+    padding: 0 15px;
+    margin-bottom: 70px;
+    color: white;
+    max-width: 50%;
+    text-align: center;
+}
+
+.choose-one-sub-title{
+    display: inline-block;
+    padding: 0 15px;
+    margin-bottom: 25px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    position: relative;
+}
+
+.choose-one-sub-title::before, .choose-one-sub-title::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background: #00C4F4;
+    border-radius: 50%;
+}
+
+.choose-one-sub-title::after{
+    left: auto;
+    right: 0;
+}
+
+.choose-one-title{
+    font-family: "Poppins";
+    font-size: 42px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+}
+
+.choose-two-flex-box{
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.choose-two-flex-box > div{ /*animaiton*/
+    width: 25%;
+    padding: 0 15px;
+    color: white;
+    font-size: 16px;
+    animation-name: FadeInUp;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.choose-two-flex-box > div > img{
+    margin-bottom: 35px;
+    height: 48px;
+}
+
+.choose-two-detail{
+    width: 77%;
+}
+
+.choose-two-title{
+    display: block;
+    margin-bottom: 24px;
+    color: white;
+    font-family: "Poppins";
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.26;
+}
+
+.choose-two-body{
+    margin-bottom: 30px;
+    color: #A4B4C3;
+    font-size: 15px;
+    line-height: 22px;
+}
+/*choose-area*/
 /* main-area */

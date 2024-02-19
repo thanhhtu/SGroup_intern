@@ -79,6 +79,9 @@
         font-size: 13px;
     }
     /*about-area*/
+
+    /*choose-area*/
+    /*choose-area*/
     /* main-area */
 }
 
@@ -120,7 +123,7 @@
         height: 480px;
     }
 
-    .banner-intro{
+    .banner-intro, .about, .choose{
         max-width: 960px;
     }
 
@@ -141,10 +144,20 @@
     /* countdown-area */
 
     /*about-area*/
-    .about{
+    /* .about{
         max-width: 960px;
-    }
+    } */
     /*about-area*/
+
+    /*choose-area*/
+    .choose-one-title{
+        font-size: 34px;
+    }
+
+    .choose-two-detail{
+        width: 98%;
+    }
+    /*choose-area*/
     /* main-area */
 }
 
@@ -154,7 +167,7 @@
         padding: 15px 0px;
     }
 
-    .header{
+    .header, .about, .choose{
         max-width: 720px;
     }
 
@@ -195,10 +208,6 @@
     /* countdown-area */
 
     /*about-area*/
-    .about{
-        max-width: 720px;
-    }
-
     .flex-box-991{
         flex-direction: column;
     }
@@ -232,6 +241,28 @@
         bottom: 6%;
     }
     /*about-area*/
+
+    /*choose-area*/
+    .choose-one-flex-box > div{
+        max-width: 100%;
+    }
+
+    .choose-one-title{
+        font-size: 40px;
+    }
+
+    .choose-two-flex-box > div{ /*animaiton*/
+        width: 50%;
+    }
+
+    .choose-two-detail{
+        width: 100%;
+    }
+
+    .choose-two-body{
+        margin-bottom: 60px;
+    }
+    /*choose-area*/
     /* main-area */
 }
 
@@ -287,22 +318,32 @@
         bottom: 3%;
     }
     /*about-area*/
+
+    /*choose-area*/
+    .choose-one-title{
+        font-size: 28px;
+    }
+
+    .choose-two-flex-box > div{ /*animaiton*/
+        margin: 0 auto;
+        /* padding: 0; */
+        max-width: 280px;
+        text-align: center;
+    }
+
+    /*choose-area*/
     /* main-area */
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px){
     /* header-area */
-    .header{
+    .header, .banner-intro, .about, .choose{
         max-width: 540px;
     }
     /* header-area */
 
     /* main-area */
     /* banner-area */
-    .banner-intro{
-        max-width: 540px;
-    }
-
     .banner-text{
         font-size: 40px;
     }
@@ -313,13 +354,19 @@
     /* countdown-area */
 
     /*about-area*/
-    .about{
-        max-width: 540px;
-    }
-
     .about-title{
         font-size: 36px;
     }
     /*about-area*/
+
+    /*choose-area*/
+    .choose-one-title{
+        font-size: 36px;
+    }
+
+    .choose-two-title{
+        margin-bottom: 15px;
+    }
+    /*choose-area*/
     /* main-area */
 }
