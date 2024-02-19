@@ -5,7 +5,9 @@
     box-sizing: border-box;
     font-family: "Outfit";
     box-sizing: border-box;
+    scroll-behavior: smooth;   
 }
+
 ul{
     list-style: none;
 }
@@ -269,15 +271,10 @@ img{
 
 .banner-text-animation{
     animation-name: FadeInDown;
-    animation-delay: 2s;
+    animation-delay: 0.2s;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
     opacity: 0;
-    animation-duration: 2s;
-
-    /* animation-name: FadeInDown;
-    animation-duration: 2s;
-    animation-delay: 5s;
-    visibility: visible; */
-    /* animation-iteration-count: infinite; */
 }
 
 .banner-icon-scroll{
@@ -391,17 +388,27 @@ img{
     width: 50%;
     padding: 0px 15px;
     line-height: 1.75;
-
 }
 
 .about-img-animation{
-    animation-name: LeftToRight;
-    animation-delay: 0.2s;
+    animation-name: FadeInLeft;
+    animation-delay: 2s;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
     text-align: center;
 }
 
 .about-img-animation img{
     max-width: 100%;
+}
+
+.about-title-animation{
+    animation-name: FadeInRight;
+    animation-delay: 2s;    /*đợi js rồi sửa*/
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
 
 .about-sub-title{
@@ -452,6 +459,10 @@ img{
     border-radius: 5px;
     padding: 25px 42px;
     font-size: 15px;
+}
+
+.about-download-button:hover{
+    background-color: #00C4F4;
 }
 
 .about-shape > img{

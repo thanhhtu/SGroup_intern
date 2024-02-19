@@ -10,6 +10,32 @@
     }
 }
 
+/* */
+@keyframes FadeInLeft{
+    from{
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* */
+@keyframes FadeInRight{
+    from{
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 @keyframes SwingBackAndForth{   /*about-shape-one*/
     from{
         transform: rotateX(0deg) translateX(0px);

@@ -66,6 +66,19 @@
         margin: 0 0px 0 55px;
     }
     /* banner-area */
+
+    /* countdown-area */
+    /* countdown-area */
+
+    /*about-area*/
+    .about-title{
+        font-size: 40px;
+    }
+
+    .about-download-button{
+        font-size: 13px;
+    }
+    /*about-area*/
     /* main-area */
 }
 
@@ -123,6 +136,15 @@
         display: none;
     }
     /* banner-area */
+
+    /* countdown-area */
+    /* countdown-area */
+
+    /*about-area*/
+    .about{
+        max-width: 960px;
+    }
+    /*about-area*/
     /* main-area */
 }
 
@@ -168,6 +190,48 @@
         line-height: 1.2;
     }
     /* banner-area */
+
+    /* countdown-area */
+    /* countdown-area */
+
+    /*about-area*/
+    .about{
+        max-width: 720px;
+    }
+
+    .flex-box-991{
+        flex-direction: column;
+    }
+
+    .about-content{
+        width: 100%;
+    }
+
+    .about-sub-title{
+        margin-top: 50px;
+    }
+
+    .about-title{
+        font-size: 40px;
+    }
+
+    .about-body-under-title{
+        width: 90%;
+    }
+
+    .about-download-button{
+        font-size: 13px;
+    }
+
+    .about-shape > .about-shape-one{
+        display: none;
+    }
+
+    .about-shape > .about-shape-two{
+        right: 12%;
+        bottom: 6%;
+    }
+    /*about-area*/
     /* main-area */
 }
 
@@ -201,6 +265,28 @@
         max-width: 100%;
     }
     /* banner-area */
+
+    /* countdown-area */
+    /* countdown-area */
+
+    /*about-area*/
+    .about-title{
+        font-size: 28px;
+    }
+
+    .about-body-under-title{
+        width: 100%;
+    }
+
+    .about-download-button{
+        padding: 20px 25px;
+    }
+
+    .about-shape > .about-shape-two{
+        right: 14%;
+        bottom: 3%;
+    }
+    /*about-area*/
     /* main-area */
 }
 
@@ -222,5 +308,18 @@
     }
 
     /* banner-area */
+
+    /* countdown-area */
+    /* countdown-area */
+
+    /*about-area*/
+    .about{
+        max-width: 540px;
+    }
+
+    .about-title{
+        font-size: 36px;
+    }
+    /*about-area*/
     /* main-area */
 }
