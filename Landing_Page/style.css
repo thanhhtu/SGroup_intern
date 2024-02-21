@@ -21,6 +21,7 @@ img{
 }
 
 .container-box{
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -40,7 +41,7 @@ img{
     letter-spacing: 0.5px;
     line-height: 1;
     text-align: center;
-    transition: all 0.4s ease;
+    transition: all 0.4s ease 0.01s;
 }
 
 /* header-area */
@@ -79,7 +80,7 @@ img{
 
 .header-detail li > a{
     color: white;
-    transition: all 0.35s ease;
+    transition: all 0.35s ease 0.01s;
 }
 
 .header-detail li:hover > a{
@@ -100,7 +101,7 @@ img{
     text-align: left;
     transform-origin: 0 0;
     transform: scale(1, 0);
-    transition: all 0.3s ease;
+    transition: all 0.3s ease 0.01s;
     cursor: default;
 }
 
@@ -143,7 +144,7 @@ img{
     text-align: left;
     transform-origin: top center;
     transform: perspective(400px) rotateX(-45deg);
-    transition: all 0.3s ease;
+    transition: all 0.3s ease 0.01s;
     cursor: default;
 }
 
@@ -161,7 +162,7 @@ img{
     padding: 5px 15px;
     margin-bottom: 5px;
     cursor: pointer;
-    transition: all 0.35s ease;
+    transition: all 0.35s ease 0.01s;
 }
 
 .header-list-lang > li:hover{
@@ -248,7 +249,6 @@ img{
 }
 
 .banner-intro{
-    max-width: 1200px;
     position: relative;
     z-index: 2;
 }
@@ -328,10 +328,6 @@ img{
 /* banner-area */
 
 /* countdown-area */
-.countdown{
-    max-width: 1200px;
-}
-
 .countdown-box{
     padding: 55px 50px 60px;
     background-color: #FFFFFF;
@@ -341,7 +337,7 @@ img{
     text-align: center;
 }
 
-.countdown-box::before{
+.countdown-box::before, .counter-content::before{
     content: "";
     width: 80%;
     height: 80%;
@@ -380,7 +376,6 @@ img{
 }
 
 .about{
-    max-width: 1200px;
     padding: 0;
 }
 
@@ -521,7 +516,6 @@ img{
 }
 
 .choose{
-    max-width: 1200px;
     padding: 0;
     line-height: 1.75;
 }
@@ -578,24 +572,28 @@ img{
     align-items: flex-start;
 }
 
-.choose-two-flex-box > div{ /*animaiton*/
+.choose-two-flex-box > div{
     width: 25%;
     padding: 0 15px;
     color: white;
     font-size: 16px;
+}
+
+.choose-two-animation{
     animation-name: FadeInUp;
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
     opacity: 0;
 }
 
-.choose-two-flex-box > div > img{
+.choose-two-animation > img{
     margin-bottom: 35px;
     height: 48px;
 }
 
 .choose-two-detail{
     width: 77%;
+    margin-bottom: 30px;
 }
 
 .choose-two-title{
@@ -606,13 +604,83 @@ img{
     font-size: 22px;
     font-weight: 500;
     line-height: 1.26;
+    transition: all 0.35s ease 0.01s;
+}
+
+.choose-two-title:hover{
+    color: #00C4F4;
 }
 
 .choose-two-body{
-    margin-bottom: 30px;
     color: #A4B4C3;
     font-size: 15px;
     line-height: 22px;
 }
 /*choose-area*/
+
+/*counter-area*/
+/* .counter-area*/
+.counter{
+    line-height: 1.75;
+}
+
+.counter-content{
+    padding: 64px 60px 33px;
+    background-color: white;
+    box-shadow: 0px 34px 35px rgba(160, 171, 191, 0.21);
+    border-radius: 20px;
+    position: relative;
+    /* top: -120px; */
+    margin-top: -120px;
+    margin-bottom: 10px;
+}
+
+.counter-detail{
+    justify-content: center;
+}
+
+.counter-detail > div{
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+.counter-detail-flex-box{
+    display: flex;
+    align-items: center;
+    width: 33.33333333%;
+}
+
+.counter-detail-img{
+    width: 71px;
+    margin-right: 30px;
+}
+
+.counter-detail-count{
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    color: black;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 0.85;
+    position: relative;
+}
+
+.counter-detail-count > p{
+    font-family: "Poppins";
+}
+
+.counter-detail-count > p::after{
+    content: "K";
+    position: absolute;
+    top: 1px;
+    left: auto;
+}
+
+.counter-detail-content > p{
+    margin-bottom: 0;
+    color: #646580;
+    line-height: 1.6;
+}
+/*counter-area*/
 /* main-area */

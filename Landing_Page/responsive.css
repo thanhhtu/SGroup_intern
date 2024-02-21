@@ -82,6 +82,9 @@
 
     /*choose-area*/
     /*choose-area*/
+
+    /*counter-area*/
+    /*counter-area*/
     /* main-area */
 }
 
@@ -123,7 +126,7 @@
         height: 480px;
     }
 
-    .banner-intro, .about, .choose{
+    .banner-intro, .about, .choose, .counter{
         max-width: 960px;
     }
 
@@ -144,9 +147,6 @@
     /* countdown-area */
 
     /*about-area*/
-    /* .about{
-        max-width: 960px;
-    } */
     /*about-area*/
 
     /*choose-area*/
@@ -158,6 +158,16 @@
         width: 98%;
     }
     /*choose-area*/
+
+    /*counter-area*/
+    .counter-content{
+        padding: 64px 30px 33px;
+    }
+
+    .counter-detail-count{
+        font-size: 40px;
+    }
+    /*counter-area*/
     /* main-area */
 }
 
@@ -167,7 +177,7 @@
         padding: 15px 0px;
     }
 
-    .header, .about, .choose{
+    .header, .about, .choose, .counter{
         max-width: 720px;
     }
 
@@ -257,12 +267,23 @@
 
     .choose-two-detail{
         width: 100%;
-    }
-
-    .choose-two-body{
         margin-bottom: 60px;
     }
     /*choose-area*/
+
+    /*counter-area*/
+    .counter-content{
+        padding: 50px 30px 20px
+    }
+
+    .counter-detail-flex-box{
+        width: 50%;
+    }
+
+    .counter-detail-count{
+        font-size: 42px;
+    }
+    /*counter-area*/
     /* main-area */
 }
 
@@ -324,20 +345,32 @@
         font-size: 28px;
     }
 
-    .choose-two-flex-box > div{ /*animaiton*/
-        margin: 0 auto;
-        /* padding: 0; */
+    .choose-two-animation{
         max-width: 280px;
+        margin: 0 auto;
         text-align: center;
     }
-
     /*choose-area*/
+
+    /*counter-area*/
+    .counter-content{
+        padding: 50px 15px 20px;
+    }
+
+    .counter-detail-img{
+        margin-right: 20px;
+    }
+    
+    .counter-detail-count{
+        font-size: 34px;
+    }
+    /*counter-area*/
     /* main-area */
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px){
     /* header-area */
-    .header, .banner-intro, .about, .choose{
+    .header, .banner-intro, .about, .choose, .counter{
         max-width: 540px;
     }
     /* header-area */
@@ -368,5 +401,23 @@
         margin-bottom: 15px;
     }
     /*choose-area*/
+
+    /*counter-area*/
+    /*counter-area*/
     /* main-area */
+}
+
+@media only screen and (max-width: 576px){
+    .choose-two-flex-box > div{
+        width: 100%;
+    }
+
+    .counter-detail{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .counter-detail-flex-box{
+        width: 100%;
+    }
 }
