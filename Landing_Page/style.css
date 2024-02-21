@@ -44,6 +44,16 @@ img{
     transition: all 0.4s ease 0.01s;
 }
 
+.sub-underline-title{
+    margin-bottom: 18px;
+    color: #564DCA;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-decoration: underline;
+    cursor: text;
+}
+
 /* header-area */
 .header-area{
     width: 100%;
@@ -406,16 +416,6 @@ img{
     opacity: 0;
 }
 
-.about-sub-title{
-    margin-bottom: 18px;
-    color: #564DCA;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    text-decoration: underline;
-    cursor: text;
-}
-
 .about-title{
     margin-bottom: 15px;
     font-family: "Poppins";
@@ -683,4 +683,219 @@ img{
     line-height: 1.6;
 }
 /*counter-area*/
+
+/*roadmap-area*/
+.roadmap-area{
+    padding: 130px 0px 100px;
+}
+
+.roadmap{
+    max-width: 1700px;
+    padding: 0;
+    line-height: 1.75;
+}
+
+.roadmap-one-flex-box{
+    justify-content: center;
+}
+
+.roadmap-one-flex-box > div{
+    padding: 0 15px;
+    margin-bottom: 65px;
+    color: white;
+    max-width: 50%;
+    text-align: center;
+}
+
+.roadmap-one-title{
+    font-family: "Poppins";
+    font-size: 45px;
+    font-weight: 600;
+    color: #030B15;
+    line-height: 1.26;
+}
+
+.roadmap-two{
+    padding: 0 15px;
+}
+
+.roadmap-two-box{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    position: relative;
+}
+
+.roadmap-two-box-one{
+    margin-bottom: 50px;
+}
+.roadmap-two-box-two{
+    margin-bottom: 0;
+}
+
+.roadmap-two-box::before{
+    content: "";
+    background: linear-gradient(294.72deg, #FF4581 9.05%, #4388DD 79.28%);
+    width: 100%;
+    height: 8px;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    opacity: 0.1;
+}
+
+.roadmap-two-item{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.roadmap-two-item-1{
+    width: 288px;
+    margin-left: 130px;
+}
+
+.roadmap-two-item-2{
+    width: 400px;
+    margin-left: 130px;
+}
+
+.roadmap-two-item-3{
+    width: 345px;
+}
+
+.roadmap-two-item-4{
+    width: 260px;
+}
+
+.roadmap-two-item-title{
+    /* display: inline-block; */
+    margin-bottom: 22px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+/*màu chữ title*/
+.roadmap-two-box-one > .roadmap-two-item-1 > .roadmap-two-item-title{
+    color: #00C4F4;
+}
+
+.roadmap-two-box-one > .roadmap-two-item-2 > .roadmap-two-item-title{
+    color: #FF9700;
+}
+
+.roadmap-two-box-one > .roadmap-two-item-3 > .roadmap-two-item-title{
+    color: #00C4F4;
+}
+
+.roadmap-two-box-one > .roadmap-two-item-4 > .roadmap-two-item-title{
+    color: #00C4F4;
+}
+
+.roadmap-two-box-two > .roadmap-two-item-1 > .roadmap-two-item-title{
+    color: #00C4F4;
+}
+
+.roadmap-two-box-two > .roadmap-two-item-2 > .roadmap-two-item-title{
+    color: #00C4F4;
+}
+
+.roadmap-two-box-two > .roadmap-two-item-3 > .roadmap-two-item-title{
+    color: #FF9700;
+}
+
+.roadmap-two-box-two > .roadmap-two-item-4 > .roadmap-two-item-title{
+    color: #00C4F4;
+}
+/*màu chữ title*/
+
+.roadmap-two-item-content{
+    margin-left: 57px;
+    padding-top: 75px;
+    padding-left: 17px;
+    position: relative;
+}
+
+.roadmap-two-item-content::before{
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: #00C4F4;  /*note nhiều màu*/
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/*màu dòng kẻ sọc, màu dot và bóng mờ dot*/
+.roadmap-two-box-one > .roadmap-two-item-1 > .roadmap-two-item-content-1::before, .roadmap-two-box-one > .roadmap-two-item-1 > .roadmap-two-item-content-1 > div, .roadmap-two-box-one > .roadmap-two-item-1 > .roadmap-two-item-content-1 > div::before{
+    background-color: #00C4F4;
+}
+
+.roadmap-two-box-one > .roadmap-two-item-2 > .roadmap-two-item-content-2::before, .roadmap-two-box-one > .roadmap-two-item-2 > .roadmap-two-item-content-2 > div, .roadmap-two-box-one > .roadmap-two-item-2 > .roadmap-two-item-content-2 > div::before{
+    background-color: #FF9700;
+}
+
+.roadmap-two-box-one > .roadmap-two-item-3 > .roadmap-two-item-content-3::before, .roadmap-two-box-one > .roadmap-two-item-3 > .roadmap-two-item-content-3 > div, .roadmap-two-box-one > .roadmap-two-item-3 > .roadmap-two-item-content-3 > div::before{
+    background-color: #00C4F4;
+}
+
+.roadmap-two-box-one > .roadmap-two-item-4 > .roadmap-two-item-content-4::before, .roadmap-two-box-one > .roadmap-two-item-4 > .roadmap-two-item-content-4 > div, .roadmap-two-box-two > .roadmap-two-item-4 > .roadmap-two-item-content-4 > div::before{
+    background-color: #00C4F4;
+}
+
+.roadmap-two-box-two > .roadmap-two-item-1 > .roadmap-two-item-content-1::before, .roadmap-two-box-two > .roadmap-two-item-1 > .roadmap-two-item-content-1 > div, .roadmap-two-box-two > .roadmap-two-item-1 > .roadmap-two-item-content-1 > div::before{
+    background-color: #00C4F4;
+}
+
+.roadmap-two-box-two > .roadmap-two-item-2 > .roadmap-two-item-content-2::before, .roadmap-two-box-two > .roadmap-two-item-2 > .roadmap-two-item-content-2 > div, .roadmap-two-box-two > .roadmap-two-item-2 > .roadmap-two-item-content-2 > div::before{
+    background-color: #00C4F4;
+}
+
+.roadmap-two-box-two > .roadmap-two-item-3 > .roadmap-two-item-content-3::before, .roadmap-two-box-two > .roadmap-two-item-3 > .roadmap-two-item-content-3 > div, .roadmap-two-box-two > .roadmap-two-item-3 > .roadmap-two-item-content-3 > div::before{
+    background-color: #FF9700;
+}
+
+.roadmap-two-box-two > .roadmap-two-item-4 > .roadmap-two-item-content-4::before, .roadmap-two-box-two > .roadmap-two-item-4 > .roadmap-two-item-content-4 > div, .roadmap-two-box-two > .roadmap-two-item-4 > .roadmap-two-item-content-4 > div::before{
+    background-color: #00C4F4;
+}
+/*màu dòng kẻ sọc, màu dot và bóng mờ dot*/
+
+.roadmap-two-item-content > div{
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: #00C4F4;
+    border-radius: 50%;
+    position: absolute;
+    left: -8px;
+    top: 0;
+}
+
+.roadmap-two-item-content > div::before{
+    content: "";
+    width: 32px;
+    height: 32px;
+    background-color: #00C4F4;
+    opacity: 0.1;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.roadmap-two-item-content > p{
+    margin-bottom: 20px;
+    color: #030B15;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.62;
+}
+
+.roadmap-two-item-content > span{
+    color: #727885;
+    font-size: 16px;
+}
+/*roadmap-area*/
 /* main-area */
