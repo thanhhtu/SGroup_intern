@@ -69,7 +69,7 @@ img{
     max-width: 1520px;
 }
 
-.header-text{
+.header-content{
     font-weight: 600;
 }
 
@@ -482,16 +482,16 @@ img{
     padding: 130px 0 218px;
 }
 
-.choose-bgr{
+.choose-bgr, .team-bgr{
     background-image: url("https://themedox.com/demo/bigtech-live/bigtech/assets/img/bg/choose_bg.jpg");
     background-size: cover; /* vừa vs background container, nếu dư thì cắt bớt*/
-    background-position: top;
+    background-position: center;
     position: relative;
     top: 0;
     left: 0;
 }
 
-.choose-bgr::before{
+.choose-bgr::before, .choose-bgr::after, .team-bgr::before, .team-bgr::after{
     content: "";
     background-image: url("https://themedox.com/demo/bigtech-live/bigtech/assets/img/bg/choose_shape01.png");
     background-position: center;
@@ -504,18 +504,13 @@ img{
 }
 
 .choose-bgr::after{
-    content: "";
     background-image: url("https://themedox.com/demo/bigtech-live/bigtech/assets/img/bg/choose_shape02.png");
-    background-position: center;
-    background-repeat: repeat;
-    width: 100%;
     height: 19px;
-    position: absolute;
-    left: 0;
+    top: auto;
     bottom: 0;
 }
 
-.choose{
+.choose, .team{
     padding: 0;
     line-height: 1.75;
 }
@@ -524,15 +519,15 @@ img{
     justify-content: center;
 }
 
-.choose-one-flex-box > div{
+.choose-one-flex-box > div, .team-one-flex-box > div{
     padding: 0 15px;
     margin-bottom: 70px;
     color: white;
-    max-width: 50%;
+    width: 50%;
     text-align: center;
 }
 
-.choose-one-sub-title{
+.choose-one-sub-title, .team-one-sub-title{
     display: inline-block;
     padding: 0 15px;
     margin-bottom: 25px;
@@ -542,29 +537,29 @@ img{
     position: relative;
 }
 
-.choose-one-sub-title::before, .choose-one-sub-title::after{
+.choose-one-sub-title::before, .choose-one-sub-title::after, .team-one-sub-title::before, .team-one-sub-title::after{
     content: "";
+    background: #00C4F4;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 10px;
-    height: 10px;
-    background: #00C4F4;
-    border-radius: 50%;
 }
 
-.choose-one-sub-title::after{
+.choose-one-sub-title::after, .team-one-sub-title::after{
     left: auto;
     right: 0;
 }
 
-.choose-one-title{
+.choose-one-title, .team-one-title{
     font-family: "Poppins";
     font-size: 42px;
     font-weight: 600;
     letter-spacing: -0.01em;
-    line-height: 1.25;
+    line-height: 1.2;
 }
 
 .choose-two-flex-box{
@@ -572,14 +567,15 @@ img{
     align-items: flex-start;
 }
 
-.choose-two-flex-box > div{
+.choose-two-flex-box > div, .team-two-flex-box > div{
     width: 25%;
     padding: 0 15px;
+    margin-bottom: 30px;
     color: white;
     font-size: 16px;
 }
 
-.choose-two-animation{
+.choose-two-animation, .team-two-animation{
     animation-name: FadeInUp;
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
@@ -591,9 +587,8 @@ img{
     height: 48px;
 }
 
-.choose-two-detail{
+.choose-two-content{
     width: 77%;
-    margin-bottom: 30px;
 }
 
 .choose-two-title{
@@ -603,7 +598,7 @@ img{
     font-family: "Poppins";
     font-size: 22px;
     font-weight: 500;
-    line-height: 1.26;
+    line-height: 1.27;
     transition: all 0.35s ease 0.01s;
 }
 
@@ -703,7 +698,7 @@ img{
     padding: 0 15px;
     margin-bottom: 65px;
     color: white;
-    max-width: 50%;
+    width: 50%;
     text-align: center;
 }
 
@@ -713,6 +708,7 @@ img{
     font-weight: 600;
     color: #030B15;
     line-height: 1.26;
+    letter-spacing: -0.01em;
 }
 
 .roadmap-two{
@@ -769,7 +765,6 @@ img{
 }
 
 .roadmap-two-item-title{
-    /* display: inline-block; */
     margin-bottom: 22px;
     font-size: 14px;
     font-weight: 700;
@@ -786,19 +781,19 @@ img{
 }
 
 .roadmap-two-box-one > .roadmap-two-item-3 > .roadmap-two-item-title{
-    color: #00C4F4;
+    color: #007FF4;
 }
 
 .roadmap-two-box-one > .roadmap-two-item-4 > .roadmap-two-item-title{
-    color: #00C4F4;
+    color: #FF4581;
 }
 
 .roadmap-two-box-two > .roadmap-two-item-1 > .roadmap-two-item-title{
-    color: #00C4F4;
+    color: #FF4581;
 }
 
 .roadmap-two-box-two > .roadmap-two-item-2 > .roadmap-two-item-title{
-    color: #00C4F4;
+    color: #007FF4;
 }
 
 .roadmap-two-box-two > .roadmap-two-item-3 > .roadmap-two-item-title{
@@ -821,7 +816,6 @@ img{
     content: "";
     width: 1px;
     height: 100%;
-    background-color: #00C4F4;  /*note nhiều màu*/
     position: absolute;
     left: 0;
     top: 0;
@@ -837,19 +831,19 @@ img{
 }
 
 .roadmap-two-box-one > .roadmap-two-item-3 > .roadmap-two-item-content-3::before, .roadmap-two-box-one > .roadmap-two-item-3 > .roadmap-two-item-content-3 > div, .roadmap-two-box-one > .roadmap-two-item-3 > .roadmap-two-item-content-3 > div::before{
-    background-color: #00C4F4;
+    background-color: #007FF4;
 }
 
-.roadmap-two-box-one > .roadmap-two-item-4 > .roadmap-two-item-content-4::before, .roadmap-two-box-one > .roadmap-two-item-4 > .roadmap-two-item-content-4 > div, .roadmap-two-box-two > .roadmap-two-item-4 > .roadmap-two-item-content-4 > div::before{
-    background-color: #00C4F4;
+.roadmap-two-box-one > .roadmap-two-item-4 > .roadmap-two-item-content-4::before, .roadmap-two-box-one > .roadmap-two-item-4 > .roadmap-two-item-content-4 > div, .roadmap-two-box-one > .roadmap-two-item-4 > .roadmap-two-item-content-4 > div::before{
+    background-color: #FF4581;
 }
 
 .roadmap-two-box-two > .roadmap-two-item-1 > .roadmap-two-item-content-1::before, .roadmap-two-box-two > .roadmap-two-item-1 > .roadmap-two-item-content-1 > div, .roadmap-two-box-two > .roadmap-two-item-1 > .roadmap-two-item-content-1 > div::before{
-    background-color: #00C4F4;
+    background-color: #FF4581;
 }
 
 .roadmap-two-box-two > .roadmap-two-item-2 > .roadmap-two-item-content-2::before, .roadmap-two-box-two > .roadmap-two-item-2 > .roadmap-two-item-content-2 > div, .roadmap-two-box-two > .roadmap-two-item-2 > .roadmap-two-item-content-2 > div::before{
-    background-color: #00C4F4;
+    background-color: #007FF4;
 }
 
 .roadmap-two-box-two > .roadmap-two-item-3 > .roadmap-two-item-content-3::before, .roadmap-two-box-two > .roadmap-two-item-3 > .roadmap-two-item-content-3 > div, .roadmap-two-box-two > .roadmap-two-item-3 > .roadmap-two-item-content-3 > div::before{
@@ -865,7 +859,6 @@ img{
     content: "";
     width: 16px;
     height: 16px;
-    background-color: #00C4F4;
     border-radius: 50%;
     position: absolute;
     left: -8px;
@@ -876,7 +869,6 @@ img{
     content: "";
     width: 32px;
     height: 32px;
-    background-color: #00C4F4;
     opacity: 0.1;
     border-radius: 50%;
     position: absolute;
@@ -888,6 +880,7 @@ img{
 .roadmap-two-item-content > p{
     margin-bottom: 20px;
     color: #030B15;
+    font-family: "Poppins";
     font-size: 20px;
     font-weight: 600;
     line-height: 1.62;
@@ -898,4 +891,96 @@ img{
     font-size: 16px;
 }
 /*roadmap-area*/
+
+/*team-area*/
+.team-area{
+    padding: 130px 0 100px;
+}
+.team-bgr{
+    background-image: url("https://themedox.com/demo/bigtech-live/bigtech/assets/img/bg/team_bg.jpg");
+}
+
+.team-bgr::before{
+    background-image: url("https://themedox.com/demo/bigtech-live/bigtech/assets/img/bg/team_shape01.png");
+    height: 29px; 
+}
+
+.team-bgr::after{
+    background-image: url("https://themedox.com/demo/bigtech-live/bigtech/assets/img/bg/team_shape02.png");
+    height: 23px;
+    top: auto;
+    bottom: 0;
+}
+
+.team-one-flex-box{
+    justify-content: center;
+}
+
+.team-one-flex-box > div{
+    margin-bottom: 60px;
+}
+
+/* .team-one-sub-title */
+
+.team-one-title{
+    line-height: 1.2;
+}
+
+.team-one-title > span{
+    color: #00C4F4;
+    font-family: "Poppins";
+}
+
+.team-two-flex-box{
+    justify-content: center;
+}
+
+.team-two-flex-box > div{
+    text-align: center;
+}
+
+.team-two-avt > img{
+    margin-bottom: 35px;
+    filter: grayscale(100%);
+    transition: all 0.3s ease 0.02s;
+}
+
+.team-two-title{
+    margin-bottom: 10px;
+    font-family: "Poppins";
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.team-two-sub-title{
+    margin-bottom: 10px;
+    color: #A4B4C3;
+}
+
+.team-two-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 -10px;
+}
+
+.team-two-icon > li{
+    padding: 0 10px;
+}
+
+.team-two-icon > li > a{
+    color: white;
+    font-size: 13px;
+    transition: all 0.3s ease 0.02s;
+}
+
+.team-two-icon > li > a:hover{
+    color: #00C4F4;
+}
+
+.team-two-flex-box > div > div:hover .team-two-avt > img{
+    filter: grayscale(0);
+}
+/* team-area */
 /* main-area */
