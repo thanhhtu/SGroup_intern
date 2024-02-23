@@ -920,6 +920,7 @@ img{
 
 .team-two-flex-box{
     justify-content: center;
+    align-items: flex-start;
 }
 
 .team-two-flex-box > div{
@@ -1024,7 +1025,6 @@ img{
     margin-right: 20px;
     margin-top: 10px;
 }
-
 /*download-area*/
 
 /*main-area*/
