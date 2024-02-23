@@ -18,6 +18,7 @@ a{
 
 img{
     vertical-align: middle;
+    max-width: 100%;
 }
 
 .container-box{
@@ -51,10 +52,9 @@ img{
     font-weight: 700;
     letter-spacing: 0.02em;
     text-decoration: underline;
-    cursor: text;
 }
 
-/* header-area */
+/*header-area*/
 .header-area{
     width: 100%;
     padding: 28px 0px;  /*30 0*/
@@ -71,10 +71,6 @@ img{
 
 .header-content{
     font-weight: 600;
-}
-
-.header-logo{
-    max-width: 100%;
 }
 
 .header-detail{
@@ -224,10 +220,10 @@ img{
     color: white;
     cursor: pointer;
 }
-/* header-area */
+/*header-area*/
 
-/* main-area */
-/* banner-area */
+/*main-area /
+/*anner-area*/
 .banner-area{
     padding-top: 225px;
     position: relative;
@@ -235,10 +231,10 @@ img{
 
 .banner-bgr{
     background-image: url("https://themedox.com/demo/bigtech-live/bigtech/assets/img/banner/banner_bg02.jpg");
-    background-size: cover; /* vừa vs background container, nếu dư thì cắt bớt*/
+    background-size: cover; /*vừa vs background container, nếu dư thì cắt bớt*/
     background-position: center;
     width: 100%;
-    height: calc(100% - 164px); /* lấy 100% height của banner-area - 164px */
+    height: calc(100% - 164px); /*lấy 100% height của banner-area - 164px*/
     position: absolute; 
     top: -1px; /*0px*/
     left: 0;
@@ -335,9 +331,9 @@ img{
 .banner-scroll a{
     margin: 0;
 }
-/* banner-area */
+/*banner-area*/
 
-/* countdown-area */
+/*countdown-area*/
 .countdown-box{
     padding: 55px 50px 60px;
     background-color: #FFFFFF;
@@ -373,11 +369,11 @@ img{
 
 .countdown-clock{
     margin-bottom: 0;
-    /* justify-content: center;
+    /*justify-content: center;
     column-gap: 115px;
     row-gap: 30px; */
 }
-/* countdown-area */
+/*countdown-area*/
 
 /*about-area*/
 .about-area{
@@ -396,27 +392,22 @@ img{
 }
 
 .about-img-animation{
+    text-align: center;
+}
+
+.about-img-animation, .about-content-two-animation{
     animation-name: FadeInLeft;
     animation-delay: 2s;
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
     opacity: 0;
-    text-align: center;
 }
 
-.about-img-animation img{
-    max-width: 100%;
-}
-
-.about-title-animation{
+.about-content-two-animation{
     animation-name: FadeInRight;
-    animation-delay: 2s;    /*đợi js rồi sửa*/
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards;
-    opacity: 0;
 }
 
-.about-title{
+.about-title, .roadmap-one-title, .download-title{
     margin-bottom: 15px;
     font-family: "Poppins";
     font-size: 45px;
@@ -425,7 +416,7 @@ img{
     line-height: 1.26;
 }
 
-.about-body-under-title{
+.about-body{
     width: 80%;
     margin-bottom: 20px;
     color: #727885;
@@ -484,7 +475,7 @@ img{
 
 .choose-bgr, .team-bgr{
     background-image: url("https://themedox.com/demo/bigtech-live/bigtech/assets/img/bg/choose_bg.jpg");
-    background-size: cover; /* vừa vs background container, nếu dư thì cắt bớt*/
+    background-size: cover; /*vừa vs background container, nếu dư thì cắt bớt*/
     background-position: center;
     position: relative;
     top: 0;
@@ -614,7 +605,7 @@ img{
 /*choose-area*/
 
 /*counter-area*/
-/* .counter-area*/
+/*.counter-area*/
 .counter{
     line-height: 1.75;
 }
@@ -625,7 +616,7 @@ img{
     box-shadow: 0px 34px 35px rgba(160, 171, 191, 0.21);
     border-radius: 20px;
     position: relative;
-    /* top: -120px; */
+    /*top: -120px;*/
     margin-top: -120px;
     margin-bottom: 10px;
 }
@@ -703,12 +694,8 @@ img{
 }
 
 .roadmap-one-title{
-    font-family: "Poppins";
-    font-size: 45px;
-    font-weight: 600;
+    margin-bottom: 0;
     color: #030B15;
-    line-height: 1.26;
-    letter-spacing: -0.01em;
 }
 
 .roadmap-two{
@@ -920,7 +907,7 @@ img{
     margin-bottom: 60px;
 }
 
-/* .team-one-sub-title */
+/*.team-one-sub-title */
 
 .team-one-title{
     line-height: 1.2;
@@ -982,5 +969,62 @@ img{
 .team-two-flex-box > div > div:hover .team-two-avt > img{
     filter: grayscale(0);
 }
-/* team-area */
-/* main-area */
+/*team-area*/
+
+/*download-area*/
+.download-area{
+    padding: 150px 0 140px;
+}
+
+.download{
+    padding: 0;
+}
+
+.download-content{
+    padding: 0 15px;
+    line-height: 1.75;
+}
+
+.download-one{
+    width: 41.66666667%;
+}
+
+.download-two{
+    width: 58.33333333%;
+}
+
+.download-one-animation, .download-two-animation{
+    animation-name: FadeInLeft;
+    animation-delay: 8s;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.download-two-animation{
+    text-align: center;
+    animation-name: FadeInRight;
+}
+
+.download-title{
+    margin-bottom: 20px;
+}
+
+.download-body{
+    margin-bottom: 30px;
+    color: #727885;
+    font-size: 16px;
+}
+
+.download-button-downld{
+    display: flex;
+}
+
+.download-button-downld > a{
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+/*download-area*/
+
+/*main-area*/
