@@ -22,6 +22,10 @@ img{
     max-width: 100%;
 }
 
+input, textarea{
+    font-family: inherit;
+}
+
 .container-box{
     max-width: 1200px;
     margin: 0 auto;
@@ -1186,7 +1190,7 @@ img{
     line-height: 2;
 }
 
-.contact-content > div > form > input, .contact-content > div > form > textarea{
+.contact-form > input, .contact-form > textarea{
     display: block;
     width: 100%;
     height: 66px;
@@ -1196,15 +1200,14 @@ img{
     border-radius: 11px;
     background-color: rgba(255, 255, 255, 0.06);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
-    font-size: 20px;
     font-weight: 500;
     letter-spacing: -0.02em;
     line-height: 1.5;
-    transition: all 0.35s linear;
+    transition: all 0.3s linear;
     outline: none;  /*xóa cái viền đen đen khi bấm vô thẻ input*/
 }
 
-.contact-content > div > form > input::placeholder, .contact-content > div > form > textarea::placeholder{
+.contact-form > input::placeholder, .contact-form > textarea::placeholder{
 	color: rgba(255, 255, 255, 0.38);
     font-size: 20px;
 	font-weight: 400;
@@ -1212,12 +1215,12 @@ img{
 	line-height: 1.5;
 }
 
-.contact-content > div > form > input:focus, .contact-content > div > form > textarea:focus{
+.contact-form > input:focus, .contact-form > textarea:focus{
     border-color: white;
     background-color: white;
 }
 
-.contact-content > div > form > textarea{
+.contact-form > textarea{
     min-height: 165px;
     max-height: 165px;
 }
@@ -1237,4 +1240,69 @@ img{
 .contact-one-animation, .contact-two-animation{
     animation-delay: 10s;
 }
+/*contact-area*/
+
+/*newsletter-area*/
+.newsletter{
+    padding: 0 15px;
+}
+
+.newsletter-content{
+    display: flex;
+    align-items: center;
+    padding: 64px 50px;
+    background-color: white;
+    box-shadow: 0px 26px 23px rgba(81, 98, 132, 0.06);
+    border-radius: 10px;
+    margin-top: -120px;
+    position: relative;
+    /* z-index: 1; */
+}
+
+.newsletter-title{
+    width: 42.5%;
+    color: #030B15;
+    font-size: 32px;
+    line-height: 1.5;
+    letter-spacing: -1px;
+}
+
+.newsletter-body{
+    width: 57.5%;
+    position: relative;
+}
+
+.newsletter-body > input{
+	width: 100%;
+	height: 72px;
+	padding: 26px 215px 26px 25px;
+	border: 1px solid #ECEEF3;
+	border-radius: 4px;
+	background-color: #F3F6FC;
+	font-weight: 400;
+	line-height: 1.25;
+}
+
+.newsletter-body > input::placeholder{
+	color: #667279;
+    font-size: 16px;
+	font-weight: 400;
+}
+
+.newletter-button-subscribe{
+    display: block;
+    padding: 21px 47px;
+    background-color: #564DCA;
+    font-size: 15px;
+    cursor: pointer;
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    bottom: 8px;
+}
+
+.newletter-button-subscribe:hover{
+    background-color: #00C4F4;
+}
+/*newsletter-area*/
 /*main-area*/

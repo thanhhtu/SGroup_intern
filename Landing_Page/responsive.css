@@ -137,7 +137,7 @@
         height: 480px;
     }
 
-    .banner-intro, .about, .choose, .counter, .download, .contact{
+    .container-box-screen1199{
         max-width: 960px;
     }
 
@@ -194,11 +194,6 @@
     }
 
     /**/
-    .team{
-        max-width: 960px;
-    }
-
-    /**/
     .download-area{
         padding: 130px 0;
     }
@@ -215,6 +210,19 @@
     .contact-infor-body{
         width: 85%;
     }
+
+    /**/
+    .newsletter-content{
+        padding: 50px 30px;
+    }
+
+    .newsletter-title{
+        font-size: 28px;
+    }
+
+    .newletter-button-subscribe{
+        font-size: 13px;
+    }
 }
 
 @media only screen and (max-width: 991.98px){
@@ -222,7 +230,7 @@
         padding: 15px 0px;
     }
 
-    .header, .banner-intro, .about, .choose, .counter, .roadmap, .team, .download, .contact{
+    .container-box-screen991{
         max-width: 720px;
     }
 
@@ -401,6 +409,22 @@
     .contact-infor-body{
         width: 100%;
     }
+
+    /**/
+    .newsletter-content{
+        padding: 45px 30px;
+        flex-wrap: wrap;
+    }
+
+    .newsletter-title{
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .newsletter-body{
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 767.98px){
@@ -504,10 +528,33 @@
     .contact-button-massage{
         padding: 20px 25px;
     }
+
+    /**/
+    .newsletter-content{
+        padding: 30px 25px;
+    }
+
+    .newsletter-title{
+        font-size: 24px;
+    }
+
+    .newsletter-body{
+        text-align: center;
+    }
+
+    .newsletter-body > input{
+        padding: 26px 20px 26px 20px;
+    }
+
+    .newletter-button-subscribe{
+        display: inline-block;
+        margin-top: 20px;
+        position: initial;
+    }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px){
-    .header, .banner-intro, .about, .choose, .counter, .team, .download, .contact{
+    .container-box-screen576and767{
         max-width: 540px;
     }
     
@@ -543,7 +590,15 @@
     .contact-fill-in-title{
         font-size: 26px;
     }
-    
+
+    /**/
+    .newsletter-content{
+        padding: 30px 35px;
+    }
+
+    .newsletter-body > input{
+        padding: 26px 20px 26px 20px;
+    }
 }
 
 @media only screen and (max-width: 576px){
