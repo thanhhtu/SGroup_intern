@@ -1203,7 +1203,7 @@ input, textarea{
     font-weight: 500;
     letter-spacing: -0.02em;
     line-height: 1.5;
-    transition: all 0.3s linear;
+    transition: all 0.35s linear;
     outline: none;  /*xóa cái viền đen đen khi bấm vô thẻ input*/
 }
 
@@ -1306,3 +1306,135 @@ input, textarea{
 }
 /*newsletter-area*/
 /*main-area*/
+
+/*footer-area*/
+.footer-container{
+    padding: 0 15px;
+    line-height: 1.75;
+}
+
+.footer-one{
+    display: flex;
+    align-items: center;
+    padding: 70px 25px 63px;    /*40 25 65*/
+}
+
+.footer-one-content{
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-one-menu{
+    width: 66.66666667%;
+}
+
+.footer-one-menu > li{
+    margin-right: 60px;
+}
+
+.footer-one-menu > li > a{
+    color: #030B15;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.3s linear;
+}
+
+.footer-one-social{
+    justify-content: flex-end;
+    width: 33.33333333%;
+}
+
+.footer-one-social > li{
+    margin-right: 40px;
+}
+
+.footer-one-social > li > a{
+    color: #0A142F;
+    opacity: 0.3;
+    font-size: 24px;
+    line-height: 1;
+    transition: all 0.3s linear;
+}
+
+.footer-one-menu > li > a:hover, .footer-one-social > li > a:hover{
+    color: #00C4F4;
+    opacity: 1;
+}
+
+/**/
+.footer-two{
+    display: flex;
+    align-items: center;
+    padding: 43px 25px 42px;    /*40 25*/
+    border-top: 1px solid #F0F3F9;
+}
+
+.footer-two-content{
+    padding: 0 15px;
+}
+
+.footer-two-copyright{
+    width: 41.66666667%;
+}
+
+.footer-two-copyright > p{
+    color: #282F3B;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.footer-two-button{
+    width: 16.66666667%;
+    text-align: center;
+}
+
+.footer-two-button > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    margin: -60px auto 15px;
+    border-radius: 50%;
+    background-color: #564DCA;
+    color: #fff;
+    font-size: 17px;
+    transition: all 0.3s linear;
+}
+
+.footer-two-button > a:hover{
+    background-color: #00C4F4;
+}
+
+.footer-two-button > span{
+    display: block;
+    /* margin-top: -3px; */
+    color: #0A142F;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer-two-link{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 41.66666667%;
+}
+
+.footer-two-link > li{
+    margin-right: 30px;
+}
+
+.footer-two-link > li > a{
+    color: #0A142F;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s linear;
+}
+
+.footer-two-link > li > a:hover{
+    color: #00C4F4;
+}
+/*footer-area*/
