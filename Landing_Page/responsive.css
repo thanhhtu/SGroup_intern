@@ -83,7 +83,7 @@
         font-size: 40px;
     }
 
-    .about-download-button{
+    .about-box-download{
         font-size: 13px;
     }
 
@@ -93,6 +93,13 @@
     }
 
     /**/
+    .contact-infor-title{
+        font-size: 45px;
+    }
+
+    .contact-button-massage{
+        font-size: 13px;
+    }
 }
 
 @media only screen and (max-width: 1199.98px){
@@ -130,7 +137,7 @@
         height: 480px;
     }
 
-    .banner-intro, .about, .choose, .counter, .download{
+    .banner-intro, .about, .choose, .counter, .download, .contact{
         max-width: 960px;
     }
 
@@ -199,6 +206,15 @@
     .download-one, .download-two{
         width: 50%;
     }
+
+    /**/
+    .contact{
+        padding: 0;
+    }
+
+    .contact-infor-body{
+        width: 85%;
+    }
 }
 
 @media only screen and (max-width: 991.98px){
@@ -206,7 +222,7 @@
         padding: 15px 0px;
     }
 
-    .header, .banner-intro, .about, .choose, .counter, .roadmap, .team, .download{
+    .header, .banner-intro, .about, .choose, .counter, .roadmap, .team, .download, .contact{
         max-width: 720px;
     }
 
@@ -253,7 +269,7 @@
         width: 90%;
     }
 
-    .about-download-button{
+    .about-box-download{
         font-size: 13px;
     }
 
@@ -345,7 +361,7 @@
         margin-bottom: 45px;
     }
 
-    .team-two-avt > img{
+    .team-two-animation > img{
         margin-bottom: 20px;
     }
 
@@ -368,6 +384,23 @@
     .download-sub-title{
         margin-top: 52px;
     }
+
+    /**/
+    .contact-content{
+        width: 100%;
+    }
+
+    .contact-content-screen991{
+        margin-bottom: 55px;
+    }
+
+    .contact-infor-title{
+        font-size: 38px;
+    }
+
+    .contact-infor-body{
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 767.98px){
@@ -389,7 +422,7 @@
         background-position: bottom;
     }
 
-    .banner-text{
+    .banner-text, .contact-infor-title{
         font-size: 32px;
     }
 
@@ -406,7 +439,7 @@
         width: 100%;
     }
 
-    .about-download-button{
+    .about-box-download{
         padding: 20px 25px;
     }
 
@@ -457,10 +490,24 @@
     .download-area{
         padding: 120px 0;
     }
+
+    /**/
+    .contact-infor-body{
+        padding: 20px;
+    }
+    
+    .contact-fill-in-title{
+        font-size: 22px;
+        line-height: 1.2;
+    }
+
+    .contact-button-massage{
+        padding: 20px 25px;
+    }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px){
-    .header, .banner-intro, .about, .choose, .counter, .team, .download{
+    .header, .banner-intro, .about, .choose, .counter, .team, .download, .contact{
         max-width: 540px;
     }
     
@@ -489,7 +536,14 @@
     }
 
     /**/
+    .contact-infor-body{
+        padding: 22px 30px;
+    }
 
+    .contact-fill-in-title{
+        font-size: 26px;
+    }
+    
 }
 
 @media only screen and (max-width: 576px){

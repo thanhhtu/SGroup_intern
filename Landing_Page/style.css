@@ -13,6 +13,7 @@ ul{
 }
 
 a{
+    display: block;
     text-decoration: none;
 }
 
@@ -33,7 +34,7 @@ img{
     flex-wrap: wrap;
 }
 
-.button{
+.btn{
     box-shadow: 0px 6px 22px rgba(6, 34, 51, 0.22);
     border-radius: 5px;
     color: white;
@@ -113,7 +114,7 @@ img{
     text-align: left;
     transform-origin: 0 0;
     transform: scale(1, 0);
-    transition: all 0.3s ease 0.01s;
+    transition: all 0.35s ease 0.01s;
     cursor: default;
 }
 
@@ -156,7 +157,7 @@ img{
     text-align: left;
     transform-origin: top center;
     transform: perspective(400px) rotateX(-45deg);
-    transition: all 0.3s ease 0.01s;
+    transition: all 0.35s ease 0.01s;
     cursor: default;
 }
 
@@ -399,7 +400,7 @@ img{
     text-align: center;
 }
 
-.about-img-animation, .about-content-two-animation{
+.about-img-animation, .about-content-two-animation, .download-one-animation, .download-two-animation, .contact-one-animation, .contact-two-animation{
     animation-name: FadeInLeft;
     animation-delay: 2s;
     animation-duration: 1.5s;
@@ -407,7 +408,7 @@ img{
     opacity: 0;
 }
 
-.about-content-two-animation{
+.about-content-two-animation, .download-two-animation, .contact-two-animation{
     animation-name: FadeInRight;
 }
 
@@ -440,7 +441,7 @@ img{
     color: #564DCA;
 }
 
-.about-download-button{
+.about-box-download{
     display: inline-block;
     background-color: #564DCA;
     border-radius: 5px;
@@ -448,7 +449,7 @@ img{
     font-size: 15px;
 }
 
-.about-download-button:hover{
+.about-box-download:hover{
     background-color: #00C4F4;
 }
 
@@ -474,7 +475,7 @@ img{
     padding: 130px 0 218px;
 }
 
-.choose-bgr, .team-bgr{
+.choose-bgr, .team-bgr, .contact-bgr{
     background-image: url("https://themedox.com/demo/bigtech-live/bigtech/assets/img/bg/choose_bg.jpg");
     background-size: cover; /*vừa vs background container, nếu dư thì cắt bớt*/
     background-position: center;
@@ -483,7 +484,7 @@ img{
     left: 0;
 }
 
-.choose-bgr::before, .choose-bgr::after, .team-bgr::before, .team-bgr::after{
+.choose-bgr::before, .choose-bgr::after, .team-bgr::before, .team-bgr::after, .contact-bgr::before, .contact-bgr::after{
     content: "";
     background-image: url("https://themedox.com/demo/bigtech-live/bigtech/assets/img/bg/choose_shape01.png");
     background-position: center;
@@ -925,10 +926,10 @@ img{
     text-align: center;
 }
 
-.team-two-avt > img{
+.team-two-animation > img{
     margin-bottom: 35px;
     filter: grayscale(100%);
-    transition: all 0.3s ease 0.02s;
+    transition: all 0.35s ease 0.02s;
 }
 
 .team-two-title{
@@ -958,14 +959,14 @@ img{
 .team-two-icon > li > a{
     color: white;
     font-size: 13px;
-    transition: all 0.3s ease 0.02s;
+    transition: all 0.35s ease 0.02s;
 }
 
 .team-two-icon > li > a:hover{
     color: #00C4F4;
 }
 
-.team-two-flex-box > div > div:hover .team-two-avt > img{
+.team-two-animation:hover > img{
     filter: grayscale(0);
 }
 /*team-area*/
@@ -988,17 +989,13 @@ img{
     width: 58.33333333%;
 }
 
+/*done*/
 .download-one-animation, .download-two-animation{
-    animation-name: FadeInLeft;
     animation-delay: 8s;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards;
-    opacity: 0;
 }
 
 .download-two-animation{
     text-align: center;
-    animation-name: FadeInRight;
 }
 
 .download-title{
@@ -1068,9 +1065,9 @@ img{
     text-align: center;
 }
 
-.faq-animation{
+/* .faq-animation{
 
-}
+} */
 
 .faq-detail-item{
     margin-bottom: 20px;
@@ -1110,7 +1107,134 @@ img{
     letter-spacing: 0;
     line-height: 1.55;
 }
-
 /*faq-area*/
 
+/*contact-area*/
+.contact-area{
+    padding: 130px 0 250px;
+}
+
+.contact-bgr{
+    background-image: url("https://themedox.com/demo/bigtech-live/bigtech/assets/img/bg/contact_bg02.jpg");
+}
+
+.contact-bgr::before{
+    background-image: url("https://themedox.com/demo/bigtech-live/bigtech/assets/img/bg/contact_shape01.png");
+    height: 29px;
+}
+
+.contact-bgr::after{
+    background-image: url("https://themedox.com/demo/bigtech-live/bigtech/assets/img/bg/contact_shape02.png");
+    height: 18px;
+    top: auto;
+    bottom: 0;
+}
+
+.contact{
+    padding: 0 40px;
+}
+
+.contact-flex-box{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-content{
+    width: 50%;
+    padding: 0 15px;
+    color: white;
+}
+
+.contact-infor-title{
+    margin-bottom: 35px;
+    font-family: "Poppins";
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+}
+
+.contact-infor-body{
+    display: flex;
+    align-items: center;
+    width: 69%;
+    margin-bottom: 15px;
+    padding: 22px 32px;
+    border: 1px solid rgba(246, 246, 246, 0.06);
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    background-color: rgba(255, 255, 255, 0.06);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 11px;
+}
+
+.contact-infor-body > img{
+    width: 35px;
+    margin-right: 22px;
+}
+
+.contact-infor-body > p{
+    margin-bottom: 0;
+    color: white;
+    font-size: 15px;
+    line-height: 146.49%;
+}
+
+.contact-fill-in-title{
+    margin-bottom: 35px;
+    font-size: 30px;
+    letter-spacing: -0.03em;
+    line-height: 2;
+}
+
+.contact-content > div > form > input, .contact-content > div > form > textarea{
+    display: block;
+    width: 100%;
+    height: 66px;
+    margin-bottom: 20px;
+    padding: 17px 22px;
+    border: 1px solid rgba(246, 246, 246, 0.06);
+    border-radius: 11px;
+    background-color: rgba(255, 255, 255, 0.06);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.5;
+    transition: all 0.35s linear;
+    outline: none;  /*xóa cái viền đen đen khi bấm vô thẻ input*/
+}
+
+.contact-content > div > form > input::placeholder, .contact-content > div > form > textarea::placeholder{
+	color: rgba(255, 255, 255, 0.38);
+    font-size: 20px;
+	font-weight: 400;
+    letter-spacing: -0.02em;
+	line-height: 1.5;
+}
+
+.contact-content > div > form > input:focus, .contact-content > div > form > textarea:focus{
+    border-color: white;
+    background-color: white;
+}
+
+.contact-content > div > form > textarea{
+    min-height: 165px;
+    max-height: 165px;
+}
+
+.contact-button-massage{
+    display: block;
+    padding: 25px 42px;
+    background-color: #00C4F4;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.contact-button-massage:hover{
+    background-color: #564DCA;;
+}
+
+.contact-one-animation, .contact-two-animation{
+    animation-delay: 10s;
+}
 /*main-area*/
