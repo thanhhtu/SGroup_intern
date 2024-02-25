@@ -79,7 +79,7 @@
     }
 
     /**/
-    .about-title, .roadmap-one-title, .download-title{
+    .about-title, .roadmap-one-title, .download-title, .faq-title{
         font-size: 40px;
     }
 
@@ -90,6 +90,17 @@
     /**/
     .roadmap-two-item-1, .roadmap-two-item-2{
         margin-left: 30px;
+    }
+
+    /**/
+    .faq-shape-one{
+        left: 3%;
+        bottom: 4%;
+    }
+    
+    .faq-shape-two{
+        right: 4%;
+        top: 8%;
     }
 
     /**/
@@ -181,7 +192,7 @@
         width: 100%;
     }
 
-    .about-title, .roadmap-one-title, .download-title{
+    .about-title, .roadmap-one-title, .download-title, .faq-title{
         font-size: 36px;
     }
 
@@ -283,7 +294,7 @@
         margin-top: 50px;
     }
 
-    .about-title, .choose-one-title, .roadmap-one-title, .team-one-title, .download-title{
+    .about-title, .choose-one-title, .roadmap-one-title, .team-one-title, .download-title, .faq-title{
         font-size: 40px;
     }
 
@@ -408,6 +419,19 @@
     }
 
     /**/
+    .faq-detail-item-ques{
+        padding: 37px 100px 37px 30px;
+    }
+    
+    .faq-detail-item-ques > p{
+        font-size: 22px;
+    }
+
+    .faq-detail-item-ans{
+        padding: 0 40px 45px 30px;
+    }
+
+    /**/
     .contact-content{
         width: 100%;
     }
@@ -445,7 +469,7 @@
         padding: 55px 0 50px;
     }
 
-    .footer-one-content{
+    .footer-one-content, .footer-two-content{
         padding: 0;
     }
 
@@ -500,7 +524,7 @@
     }
 
     /**/
-    .about-title, .choose-one-title, .roadmap-one-title, .team-one-title, .download-title{
+    .about-title, .choose-one-title, .roadmap-one-title, .team-one-title, .download-title, .faq-title{
         font-size: 28px;
     }
 
@@ -558,6 +582,37 @@
     /**/
     .download-area{
         padding: 120px 0;
+    }
+
+    /**/
+    .faq-area{
+        padding: 115px 0 120px;
+    }
+
+    .faq-detail-item-ques{
+        padding: 25px 60px 25px 25px;
+    }
+
+    .faq-detail-item-ques::before{
+        font-size: 20px;
+        top: 20px;
+        right: 25px;
+    }
+
+    .faq-detail-item-ques > p{
+        font-size: 18px;
+    }
+
+    .faq-detail-item-ques > i{
+        font-size: 20px;
+    }
+
+    .faq-detail-item-ans{
+        padding: 0 30px 40px 25px;
+    }
+
+    .faq-shape{
+        display: none;
     }
 
     /**/
@@ -627,7 +682,7 @@
     }
 
     /**/
-    .about-title, .choose-one-title, .roadmap-one-title, .team-one-title, .download-title{
+    .about-title, .choose-one-title, .roadmap-one-title, .team-one-title, .download-title, .faq-title{
         font-size: 36px;
     }
 
@@ -644,6 +699,9 @@
     .roadmap-two-item{
         padding: 0 10px;
     }
+
+    /**/
+
 
     /**/
     .contact-infor-body{
