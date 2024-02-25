@@ -380,11 +380,40 @@ input, textarea{
     line-height: 1.88;
 }
 
-.countdown-clock{
-    margin-bottom: 0;
-    /*justify-content: center;
+.countdown-body{
+    justify-content: center;
     column-gap: 115px;
-    row-gap: 30px; */
+    /* row-gap: 30px; */
+}
+
+.countdown-clock{
+    height: 140px;
+    width: 140px;
+}
+
+.countdown-detail{
+    display: inline-block;
+    text-align: center;
+}
+
+.countdown-detail > p{
+    /* margin-top: -95px; */
+    margin-bottom: 5px;
+    color: #030B15;
+    font-family: "Poppins";
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 1;
+    /* text-align: center; */
+}
+
+.countdown-detail > span{
+    display: block;
+    font-size: 14px;
+    color: #030B15;
+    font-weight: 500;
+    line-height: 1;
+    /* text-align: center; */
 }
 /*countdown-area*/
 

@@ -79,7 +79,7 @@
     }
 
     /**/
-    .about-title, .roadmap-one-title, .download-title, .faq-title{
+    .title-screen1500{
         font-size: 40px;
     }
 
@@ -192,7 +192,7 @@
         width: 100%;
     }
 
-    .about-title, .roadmap-one-title, .download-title, .faq-title{
+    .title-screen1199{
         font-size: 36px;
     }
 
@@ -294,7 +294,7 @@
         margin-top: 50px;
     }
 
-    .about-title, .choose-one-title, .roadmap-one-title, .team-one-title, .download-title, .faq-title{
+    .title-screen991{
         font-size: 40px;
     }
 
@@ -524,7 +524,7 @@
     }
 
     /**/
-    .about-title, .choose-one-title, .roadmap-one-title, .team-one-title, .download-title, .faq-title{
+    .title-screen767{
         font-size: 28px;
     }
 
@@ -682,7 +682,7 @@
     }
 
     /**/
-    .about-title, .choose-one-title, .roadmap-one-title, .team-one-title, .download-title, .faq-title{
+    .title-screen576ad767{
         font-size: 36px;
     }
 
