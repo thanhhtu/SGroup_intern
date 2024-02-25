@@ -170,6 +170,10 @@
     }
 
     /**/
+    .countdown-body{
+        column-gap: 70px;
+    }
+    /**/
     .choose-one-title, .team-one-title{
         font-size: 34px;
     }
@@ -283,6 +287,11 @@
     .banner-text{
         font-size: 55px;
         line-height: 1.2;
+    }
+
+    /**/
+    .countdown-body{
+        column-gap: 30px;
     }
 
     /**/
@@ -521,6 +530,25 @@
 
     .banner-content img{
         max-width: 100%;
+    }
+
+    /**/
+    .countdown-box{
+        padding: 35px 25px;
+    }
+
+    .countdown-body{
+        column-gap: 25px;
+    }
+
+    .countdown-clock{
+        height: 110px;
+        width: 110px;
+        border: 6px solid rgb(3, 11, 21);
+    }
+
+    .countdown-detail > p{
+        font-size: 30px;
     }
 
     /**/
