@@ -1316,7 +1316,8 @@ input, textarea{
 .footer-one{
     display: flex;
     align-items: center;
-    padding: 70px 25px 63px;    /*40 25 65*/
+    flex-wrap: wrap;
+    padding: 70px 25px 65px;    /*70 25 65*/
 }
 
 .footer-one-content{
@@ -1367,7 +1368,8 @@ input, textarea{
 .footer-two{
     display: flex;
     align-items: center;
-    padding: 43px 25px 42px;    /*40 25*/
+    flex-wrap: wrap;
+    padding: 40px 25px;    /*40 25*/
     border-top: 1px solid #F0F3F9;
 }
 
@@ -1421,6 +1423,7 @@ input, textarea{
     align-items: center;
     justify-content: flex-end;
     width: 41.66666667%;
+    line-height: 1.867;
 }
 
 .footer-two-link > li{

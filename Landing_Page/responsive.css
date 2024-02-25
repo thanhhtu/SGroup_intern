@@ -100,6 +100,11 @@
     .contact-button-massage{
         font-size: 13px;
     }
+
+    /**/
+    .newletter-button-subscribe{
+        font-size: 13px;
+    }
 }
 
 @media only screen and (max-width: 1199.98px){
@@ -222,6 +227,15 @@
 
     .newletter-button-subscribe{
         font-size: 13px;
+    }
+
+    /**/
+    .footer-one{
+        padding: 70px 15px 63px;    /*70 30 65*/
+    }
+
+    .footer-two{
+        padding: 43px 15px;
     }
 }
 
@@ -425,6 +439,37 @@
     .newsletter-body{
         width: 100%;
     }
+
+    /**/
+    .footer-one{
+        padding: 55px 0 50px;
+    }
+
+    .footer-one-content{
+        padding: 0;
+    }
+
+    .footer-one-menu > li{
+        margin-right: 40px;
+    }
+
+    .footer-two{
+        padding: 20px 0;
+    }
+
+    .footer-two-copyright{
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-two-link{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer-two-button{
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 767.98px){
@@ -550,6 +595,24 @@
         display: inline-block;
         margin-top: 20px;
         position: initial;
+    }
+
+    /**/
+    .footer-one{
+        padding: 40px 0 35px;
+    }
+
+    .footer-one-content{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer-one-menu > li{
+        margin-right: 20px;
+    }
+
+    .footer-one-social{
+        margin-top: 20px;
     }
 }
 
