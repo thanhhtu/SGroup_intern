@@ -80,6 +80,13 @@ input, textarea{
     padding: 0 15px;
 }
 
+.header-animation{
+    animation-name: header-ani;
+    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
 .header-content{
     font-weight: 600;
 }
