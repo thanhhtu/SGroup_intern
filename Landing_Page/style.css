@@ -313,8 +313,8 @@ input, textarea{
 }
 
 .banner-icon > li{ 
+    width: min-content;
     margin-bottom: 25px;
-    width: auto;
     border: 1px solid #F3F3F3;
     border-radius: 50px;
     display: flex;
