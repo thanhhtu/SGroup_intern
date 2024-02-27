@@ -1198,7 +1198,7 @@ input, textarea{
 
 /*done*/
 .download-one-animation, .download-two-animation{
-    animation-delay: 8s;
+    animation-delay: 8.5s;
 }
 
 .download-two-animation{
@@ -1274,7 +1274,7 @@ input, textarea{
 }
 
 .faq-animation{
-    animation-duration: 1.5s;
+    animation-delay: 9s;
 }
 
 .faq-detail-item{
