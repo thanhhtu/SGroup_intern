@@ -259,6 +259,10 @@
         padding: 15px 0px;
     }
 
+    .header-animation{
+        animation-name: header-ani-less991;
+    }
+
     .container-box-screen991{
         max-width: 720px;
     }
@@ -757,5 +761,9 @@
 
     .counter-detail{
         align-items: flex-start;
+    }
+
+    .header-bar-menu{
+        max-width: 280px;
     }
 }

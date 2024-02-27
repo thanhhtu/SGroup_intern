@@ -77,8 +77,25 @@
         background-color: #030B15;
         box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
         position: fixed;
-        top: -1px;
-        z-index: 10;
+        top: 0;
+        z-index: 5;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes header-ani-less991{
+    from{
+        padding: 10px 0;
+        transform: translateY(-30px);
+    }
+
+    to{
+        padding: 10px 0;
+        background-color: #030B15;
+        box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+        position: fixed;
+        top: 0;
+        z-index: 5;
         transform: translateY(0px);
     }
 }
