@@ -312,16 +312,16 @@ input, textarea{
     z-index: 2;
 }
 
-.banner-icon li{ 
+.banner-icon > li{ 
     margin-bottom: 25px;
+    width: auto;
     border: 1px solid #F3F3F3;
     border-radius: 50px;
-
-    display: flex;  /*flex canh chữ khi làm js ấn vô có chũ bay ra đó*/
+    display: flex;
     align-items: center;
 }
 
-.banner-icon p{
+.banner-icon > li > div{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -331,6 +331,18 @@ input, textarea{
     color: #081A39;
     font-size: 15px;
     cursor: pointer;
+}
+
+.banner-icon span{
+    display: none;
+    padding-right: 14px;
+    color: #B5BAC4;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.banner-icon > li:hover > span{
+    display: block;
 }
 
 .banner-scroll{
