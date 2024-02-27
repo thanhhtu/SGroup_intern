@@ -333,7 +333,7 @@ input, textarea{
     cursor: pointer;
 }
 
-.banner-icon span{
+.banner-icon > li > span{
     display: none;
     padding-right: 14px;
     color: #B5BAC4;
