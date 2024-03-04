@@ -3,7 +3,7 @@ const arr = [5, 6, 7, 8, 9, 10];
 //map -> not change the origin array
 console.log("map");
 
-function Map(array){
+function Map(callback, array){
     const new_array = [];
     for(let i = 0; i < array.length; i++){
         new_array[i] = array[i];
@@ -11,72 +11,78 @@ function Map(array){
 
     const return_array = [];
     for(let i = 0; i < new_array.length; i++){
-        new_array[i] *= 5;
-        return_array.push(new_array[i]);
+        return_array.push(callback(new_array[i]));
     }
-
     return return_array;
 }
 
-const map_arr = Map(arr);
+const map_arr = Map((value) => value *= 5, arr);
 console.log(map_arr);
 
 //forEach
 console.log("\nforEach");
 
-for(let i = 0; i < arr.length; i++) {
-    console.log(`${arr[i]}`);
+function ForEach(callback, array){
+    for(let i = 0; i < array.length; i++){
+        callback(array[i]);
+    }
 }
+
+ForEach((value) => console.log(value), arr);
 
 //find -> return the value of the first array element that passes the test funct
 console.log("\nfind");
 
-function Find(array){
+function Find(callback, array){
     for(let i = 0; i < array.length; i++){
-        if(array[i] > 7.5) return array[i];
+        if(callback(array[i])) return array[i];
     }
+    return undefined;
 }
 
-console.log(Find(arr));
+console.log(Find((value) => value > 7.8, arr));
 
 //findIndex -> return the index of the first array element that passes the test funct
 console.log("\nfindIndex");
 
-function FindIndex(array){
+function FindIndex(callback, array){
     for(let i = 0; i < array.length; i++){
-        if(array[i] > 7.8) return i;
+        if(callback(array[i])) return i;
     }
+    return undefined;
 }
 
-console.log(FindIndex(arr));
+console.log(FindIndex((value) => value > 7, arr));
 
 //reduce
 console.log("\nreduce");
 
-function Reduce(array){
-    let total = 0;
+function Reduce(callback, array, initalValue){
+    let caculate = (initalValue != undefined) ? initalValue : 0;
     for(let i = 0; i < array.length; i++){
-        total += array[i];
+        caculate = callback(caculate, array[i], i, array)
     }
-    return total;
+    return caculate;
 }
 
-console.log(Reduce(arr));
+console.log(
+    Reduce(((sum, value, index, arr) => sum + value), arr, 0)
+);
 
 //filter
 console.log("\nfilter");
 
-function Filter(array){
+function Filter(callback, array){
     const new_array = [];
     for(let i = 0; i < array.length; i++){
-        if(array[i] > 7.8){
+        if(callback(array[i])){
             new_array.push(array[i]);
         }
     }
     return new_array;
 }
 
-const arr_filter = Filter(arr);
+const arr_filter = Filter((value) => value > 7, arr);
 console.log(arr_filter);
 
 //////////////////////////////////////////
