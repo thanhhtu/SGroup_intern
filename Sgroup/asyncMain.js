@@ -34,24 +34,46 @@
 //     }, 0);
 // }
 
-//promise
-let randomNumber;
-const myPromise = new Promise((resolve, reject) => {
+// //promise
+// let randomNumber;
+// const myPromise = new Promise((resolve, reject) => {
 
-    randomNumber = Math.random() * 10;
+//     randomNumber = Math.random() * 10;
+
+//     //fulfilled
+//     if(randomNumber > 5) resolve(randomNumber); //value trong resolve được truyền làm tham số của callback trong then()
+
+//     //rejected
+//     else reject(randomNumber); //value trong resolve được truyền làm tham số của callback trong catch()
+
+// });
+
+// myPromise
+//     .then(function(fulfilledNumber){
+//         console.log('fulfil (>5): ', fulfilledNumber);
+//     })
+//     .catch(function(rejectNumber){
+//         console.log('reject (<5): ', rejectNumber);
+//     })
+
+//Viết hàm promise randomNumber, thành công khi random > 50, trả về số random gốc ban đầu, thất bại khi random < 10, trả về lỗi “số nhỏ quá”
+let randomNum;
+const MyPromise = new Promise((resolve, reject) => {
+
+    randomNum = Math.random();
 
     //fulfilled
-    if(randomNumber > 5) resolve(randomNumber); //value trong resolve được truyền làm tham số của callback trong then()
+    if(randomNum > 50) resolve(randomNum); //value trong resolve được truyền làm tham số của callback trong then()
 
     //rejected
-    else reject(randomNumber); //value trong resolve được truyền làm tham số của callback trong catch()
+    else if(randomNum < 10) reject(randomNum); //value trong resolve được truyền làm tham số của callback trong catch()
 
 });
 
-myPromise
+MyPromise
     .then(function(fulfilledNumber){
-        console.log('fulfil (>5): ', fulfilledNumber);
+        console.log('fulfil (>50): ', fulfilledNumber);
     })
     .catch(function(rejectNumber){
-        console.log('reject (<5): ', rejectNumber);
+        console.log('reject (<10): So nho qua ', rejectNumber);
     })
