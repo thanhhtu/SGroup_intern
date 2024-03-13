@@ -2,7 +2,6 @@ const a = document.querySelector("h1");
 const b = document.querySelector("div");
 const c = document.querySelector("img");
 
-
 setTimeout(function(){
     fetch ("https://pokeapi.co/api/v2/pokemon/pikachu")
         .then(function(response){
