@@ -30,7 +30,7 @@ setTimeout(async function(){
     localStorage.setItem('src', data.sprites.front_default);
 }, 3000);
 
-const name1= localStorage.getItem('name');
+const name1= localStorage.getItem('name'); //không dùng name vì name có thể là 1 tên đặc biệt (cái này tùy browser)
 const src = localStorage.getItem('src');
 a.innerText = name1;
 b.style.display = "block";
