@@ -12,7 +12,6 @@ setTimeout(function(){
             console.log(data)
             a.innerText = data.name;
             b.style.display = "block";
-            c.src = data.sprites.front_default
-            ;
+            c.src = data.sprites.front_default;
         })
 }, 3000)
