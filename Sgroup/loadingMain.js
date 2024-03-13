@@ -12,6 +12,7 @@ setTimeout(function(){
             console.log(data)
             a.innerText = data.name;
             b.style.display = "block";
-            c.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png";
+            c.src = data.sprites.front_default
+            ;
         })
 }, 3000)
