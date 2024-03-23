@@ -28,9 +28,17 @@ register_mode.onclick = function(e){
     login_form.style.display = "none";
 }
 
+function checkEmail(email){
+
+}
+
+function checkPassword(password){
+    
+}
+
 function Login(){
     let data = localStorage.getItem("user-login");
-    let arrLogin = JSON.parse(data); //lấy data trong local storage, không rỗng vì chắc chắn sẽ có từ đăng kí
+    let arrLogin = JSON.parse(data); //lấy data trong local storage, không rỗng vì chắc chắn đã có từ đăng kí
     
     let username = document.getElementById("username-login-input").value;
     let password = document.getElementById("password-login-input").value;
