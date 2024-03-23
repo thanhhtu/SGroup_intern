@@ -4,41 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        body{
-            background: url("https://img2.thuthuatphanmem.vn/uploads/2018/11/17/anh-anime-phong-canh-buon_112649105.jpg");
-        }
-        .container{
-            font-family: "Outfit";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 25%;
-            height: 31%;
-            border-radius: 10px;
-            background-color: rgba(255, 255, 255, 0.6);
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container" style="text-align: center;">
-        <h1>REGISTER</h1>
-        <div>
-            <span>Username</span>
-            <input type="text" id="username-register">
-        </div>
-        <br>
-        <div>
-            <span>Password</span>
-            <input type="password" id="password-register">
-        </div>
-        <br>
-        <div>
-            <button id="register">Register</button>
+    <div class="container">
+        <div></div>
+        <div class="login-register-container">
+            <div class="login-register-mode">
+                <p id="login-mode">Login</p> <!--đã lấy id-->
+                <p id="register-mode">Register</p> <!--đã lấy id-->
+            </div>
+            <form id="login-form">
+                <p>Username</p>
+                <input type="text" placeholder="Enter your name" required id="username-login-input">
+                <p>Password</p>
+                <input type="password" placeholder="Enter your password" required id="password-login-input">
+                <button id="login-btn" class="btn">LOG IN</button>
+            </form>
+
+            <form id="register-form">
+                <p>Email</p>
+                <input type="email" placeholder="Enter your email" required id="email-register-input">
+                <p>Username</p>
+                <input type="text" placeholder="Enter your name" required id="username-register-input">
+                <p>Password</p>
+                <input type="password" placeholder="Enter your password" required id="password-register-input">
+                <button id="register-btn" class="btn">REGISTER</button>
+            </form>
         </div>
     </div>
     <script src="main.js"></script>
