@@ -14,6 +14,9 @@ login_mode.onclick = function(e){
     //chuyển tử form register sang form login
     login_form.style.display = "block";
     register_form.style.display = "none";
+
+    document.getElementById("username-login-input").value = "";
+    document.getElementById("password-login-input").value = "";
 }
 
 // chuyển sang register mode khi nhấn vào dòng chữ register
@@ -26,14 +29,10 @@ register_mode.onclick = function(e){
     //chuyển tử form login sang form register
     register_form.style.display = "block"; 
     login_form.style.display = "none";
-}
 
-function checkEmail(email){
-
-}
-
-function checkPassword(password){
-    
+    document.getElementById("email-register-input").value = "";
+    document.getElementById("username-register-input").value = "";
+    document.getElementById("password-register-input").value = "";
 }
 
 function Login(){
@@ -92,7 +91,6 @@ function Register(){
         }else{
             alert("This username has already been registered in this system!");
         }
-        return false;
     } 
 }
 
