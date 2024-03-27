@@ -1,0 +1,124 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+
+.frame{
+    max-width: 70%;
+    width: 900px;
+    height: 550px;
+
+    border-radius: 25px;
+    box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.18);
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/**/
+.frame-img{
+    width: 50%;
+    height: 550px;
+    border-radius: 25px;
+}
+
+.frame-img > img{
+    width: 100%;
+    height: 550px;
+}
+
+/**/
+.frame-content{
+    width: 50%;
+    height: 550px;
+    position: relative;
+}
+
+.login-register-container{
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-register-mode{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login-register-mode > p{
+    width: 100%;
+    padding-bottom: 4px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#login-mode{
+    border-bottom: 2px solid rgba(17, 105, 142, 1)
+}
+
+form{
+    margin-top: 24px;
+}
+
+.form-input > p{
+    padding: 15px 0 4px;
+}
+
+.form-input > input{
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid rgba(217, 217, 217, 1);
+    border-radius: 2px;
+    outline: none;
+    font-family: "Plus Jakarta Sans";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+input::placeholder{
+    color: rgba(217, 217, 217, 1);
+}
+
+.form-checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.form-checkbox > span{
+    padding: 15px 8px 17px;
+}
+
+.btn{
+    display: block; 
+    width: 100%;
+    padding: 8px 15px;
+    border-radius: 41px;
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.043);
+    background: rgba(0, 166, 218, 1);
+    color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    cursor: pointer;
+}
+
+#register-form{
+    display: none;
+}
