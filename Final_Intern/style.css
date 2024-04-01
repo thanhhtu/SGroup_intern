@@ -9,7 +9,7 @@
     line-height: 22px;
 }
 
-/**/
+/*background login page*/
 .decor-login{
     position: fixed;
     width: 100%;
@@ -36,8 +36,8 @@
     top: 80%;
     right: 25%;
 }
-/**/
 
+/*login frame*/
 .frame{
     max-width: 70%;
     width: 850px;
@@ -59,6 +59,7 @@
     z-index: 1;
 }
 
+/*frame decoration*/
 .frame-img{
     width: 50%;
     height: 600px;
@@ -100,7 +101,7 @@
     right: 0px;
 }
 
-/**/
+/*login entry*/
 .frame-content{
     width: 50%;
     height: 550px;
@@ -136,11 +137,11 @@ form{
     margin-top: 24px;
 }
 
-.form-input > p{
+.entry > p{
     padding: 15px 0 4px;
 }
 
-.form-input > input{
+.entry > input{
     display: block;
     width: 100%;
     padding: 8px 12px;
@@ -155,19 +156,21 @@ form{
 
 input::placeholder{
     color: rgba(217, 217, 217, 1);
+    padding: 15px 0 4px;
 }
 
-.form-checkbox{
+.remember{
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
-.form-checkbox > label{
+.remember > label{
     margin: 15px 8px 17px;
 }
 
-.form-checkbox > input{
+/*changing the style of the checkbox*/
+.remember > input{
     appearance: none; /*Hides certain features*/
     height: 15px;
     width: 15px;
@@ -179,7 +182,7 @@ input::placeholder{
     justify-content: center;
 }
 
-.form-checkbox > input::after{
+.remember > input::after{
     font-family: "Font Awesome 5 Free";
     content: "\f00c";
     color: rgba(255, 255, 255);
@@ -188,15 +191,16 @@ input::placeholder{
     display: none;
 }
 
-.form-checkbox > input:checked {
+.remember > input:checked {
     background-color: rgba(0, 166, 218, 1);
 }
 
-.form-checkbox > input:checked::after{
+.remember > input:checked::after{
     display: block;
 }
+/**/
 
-.btn{
+#login-btn{
     display: block; 
     width: 100%;
     padding: 8px 15px;
@@ -206,8 +210,4 @@ input::placeholder{
     color: rgba(255, 255, 255, 1);
     font-weight: 400;
     cursor: pointer;
-}
-
-#register-form{
-    display: none;
 }
