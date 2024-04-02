@@ -1,0 +1,110 @@
+@media only screen and (max-width: 1199.98px){
+    .decor-login-page1{
+        height: 60%;
+    }
+
+    .decor-login-page2{
+        height: 60%;
+    }
+
+    .decor-login-page3{
+        height: 8%;
+    }
+
+    .frame-img{
+        width: 40%;
+    }
+
+    .frame-content{
+        width: 60%;
+    }
+} 
+
+@media only screen and (max-width: 991.98px){
+    .decor-login-page1{
+        height: 50%;
+    }
+
+    .decor-login-page2{
+        height: 50%;
+    }
+
+    .frame-img{
+        display: none;
+    }
+
+    .frame-content{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 767.98px){
+    *{
+        font-size: 12px;
+    }
+
+    .decor-login-page1{
+        height: 40%;
+    }
+
+    .decor-login-page2{
+        height: 40%;
+    }
+
+    .decor-login-page3{
+        height: 5%;
+    }
+
+    .frame, .frame-content{
+        height: 500px;
+    }
+
+    .entry > input{
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    .decor-login-page1{
+        height: 30%;
+    }
+
+    .decor-login-page2{
+        height: 30%;
+    }
+
+    .decor-login-page3{
+        height: 2%;
+    }
+
+    .form-entry{
+        margin-top: 15px;
+    }
+
+    .frame, .frame-content{
+        height: 450px;
+    }
+
+    .frame-content{
+        height: 450px;
+    }
+
+    .entry > input{
+        padding: 5px 10px;
+    }
+
+    #login-btn{
+        padding: 5px 10px;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .frame{
+        max-width: 85%;
+        height: 400px;
+    }
+
+    .frame-content{
+        height: 400px;
+    }
+}

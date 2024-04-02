@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.container{
+    margin: 2.5%;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header > img{
+    width: 12%;
+}
+
+.new-task{
+    color: rgba(90, 92, 99, 1);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.new-task > i{
+    font-size: 12px;
+    padding-right: 8px;
+}
+
+.general-task{
+    display: flex;
+}
+
+.general-task > div{
+    width: 350px;
+    height: 35px;
+    background-color: lightblue;
+    margin-right: 60px;
+    border-radius: 5px;
+}
+
+#todo{
+
+}
+
+#doing{
+
+}
+
+#completed{
+
+}
+
+#blocked{
+    margin-right: 0;
+}
