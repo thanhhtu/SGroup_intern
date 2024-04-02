@@ -1,10 +1,10 @@
 let emailInput = document.getElementById("email-input");
 let pwdInput = document.getElementById("pwd-input");
 
-function check(){
-    //check empty entry
+function Login(){
+    //border will change red when inputs empty
     if(emailInput.value == "" || emailInput.value == null){
-        emailInput.style.borderColor = "#D04848";    
+        emailInput.style.borderColor = "#D04848";
     }
 
     if(pwdInput.value == "" || pwdInput.value == null){
@@ -40,17 +40,33 @@ function check(){
     }
 }
 
-document.addEventListener("DOMContentLoaded", function(){
-    document.getElementById("login-btn").addEventListener("click", check);
-    emailInput.onchange = function(){
+function checkEntry(){
+    emailInput.onblur = function(){
         if(emailInput.value != ""){
             emailInput.style.borderColor = "green"; 
+        }else{
+            emailInput.style.borderColor = "rgb(232, 229, 229, 0.8)"; 
         }
     }
     
-    pwdInput.onchange = function(){
+    pwdInput.onblur = function(){
         if(pwdInput.value != ""){
             pwdInput.style.borderColor = "green"; 
+        }else{
+            pwdInput.style.borderColor = "rgb(232, 229, 229, 0.8)";
         }
     }
+
+    emailInput.onfocus = function(){
+        emailInput.style.borderColor = "grey"; 
+    }
+
+    pwdInput.onfocus = function(){
+        pwdInput.style.borderColor = "grey";
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+    document.getElementById("login-btn").addEventListener("click", Login);
+    checkEntry();
 });
