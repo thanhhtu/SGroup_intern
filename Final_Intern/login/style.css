@@ -147,7 +147,7 @@
     padding: 8px 12px;
     border: 1px solid rgba(217, 217, 217, 1);
     border-radius: 2px;
-    outline: none;
+    /* outline: none; */
     font-family: "Plus Jakarta Sans";
     font-size: 14px;
     font-weight: 500;
@@ -200,7 +200,7 @@ input::placeholder{
 }
 /**/
 
-#login-btn{
+#btn-login{
     display: block; 
     width: 100%;
     padding: 8px 15px;

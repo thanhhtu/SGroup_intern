@@ -39,10 +39,6 @@
 }
 
 @media only screen and (max-width: 767.98px){
-    *{
-        font-size: 12px;
-    }
-
     .decor-login-page1{
         height: 40%;
     }
@@ -60,7 +56,7 @@
     }
 
     .entry > input{
-        font-size: 10px;
+        font-size: 12px;
     }
 }
 
