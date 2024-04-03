@@ -56,14 +56,6 @@ function checkEntry(){
             pwdInput.style.borderColor = "rgb(232, 229, 229, 0.8)";
         }
     }
-
-    // emailInput.onfocus = function(){
-    //     emailInput.style.borderColor = "grey"; 
-    // }
-
-    // pwdInput.onfocus = function(){
-    //     pwdInput.style.borderColor = "grey";
-    // }
 }
 
 document.addEventListener("DOMContentLoaded", function(){
