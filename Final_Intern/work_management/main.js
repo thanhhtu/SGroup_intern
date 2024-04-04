@@ -27,21 +27,21 @@ function checkInputNotEmpty(){
         if(category_input.value != ""){
             category_input.style.border = "1.5px solid green"; 
         }else{
-            category_input.style.borderColor = "rgb(232, 229, 229, 0.8)"; 
+            category_input.style.borderColor = "rgba(217, 217, 217, 1)"; 
         }
     }
     title_input.onblur = function(){
         if(title_input.value != ""){
             title_input.style.border = "1.5px solid green"; 
         }else{
-            title_input.style.borderColor = "rgb(232, 229, 229, 0.8)";
+            title_input.style.borderColor = "rgba(217, 217, 217, 1)";
         }
     }
     content_input.onblur = function(){
         if(content_input.value != ""){
             content_input.style.border = "1.5px solid green"; 
         }else{
-            content_input.style.borderColor = "rgb(232, 229, 229, 0.8)";
+            content_input.style.borderColor = "rgba(217, 217, 217, 1)";
         }
     }
 }
@@ -54,9 +54,9 @@ function createOrCloseCreateTodo(){
     title_input.value = "";
     content_input.value = "";
 
-    category_input.style.border = "1px solid rgba(217, 217, 217, 1)";
-    title_input.style.border = "1px solid rgba(217, 217, 217, 1)";
-    category_input.style.border = "1px solid rgba(217, 217, 217, 1)";
+    category_input.style.borderColor = "rgba(217, 217, 217, 1)";
+    title_input.style.borderColor = "rgba(217, 217, 217, 1)";
+    content_input.style.borderColor = "rgba(217, 217, 217, 1)";
 }
 
 document.addEventListener("DOMContentLoaded", function(){
