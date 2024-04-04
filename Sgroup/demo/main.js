@@ -93,3 +93,40 @@
 //     });
 
 //1 1 1 //-> in sau 1s
+
+// let obj = {
+//     a: "A",
+//     b: "B"
+// }
+// console.log(typeof(obj)); //object
+
+// let arr = [1, 2, 30]
+// console.log(typeof(arr)); //object
+
+// let dt = new Date();
+// console.log(typeof(dt)); //object
+
+// let funct = function(){
+//     let x = ok;
+// }
+// console.log(typeof(funct)); //function
+
+// let x = Symbol(1.5);
+// let y = Symbol(1.5);
+// console.log(x === y); //false
+
+// let z = x;
+// console.log(x === z); //true
+
+// let x = 1.2;
+// let y = ""+x;
+// console.log(typeof(y)); //true
+
+// const arr = [1, 2];
+// arr[3] = 3;
+// console.log(arr);
+
+const originalObject = { name: 'John', age: 30 };
+const deepCopy = { ...originalObject }; //Deep copy
+deepCopy.age = 25;
+console.log(originalObject.age); //30

@@ -4,14 +4,30 @@
     border: 0;
     box-sizing: border-box;
     font-family: "Plus Jakarta Sans";
-    font-size: 16px;
     line-height: 22px;
 }
+
+/*fontsize: 14 và 12*/
 
 .container{
     margin: 2.5%;
 }
 
+.bgr-popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1000dvh;
+    height: 10000dvw;
+    background-color: rgba(90, 92, 99, 0.5);
+    z-index: 3;
+}
+
+.active{
+    display: block !important;
+}
+
+/*header*/
 .header{
     display: flex;
     align-items: center;
@@ -19,45 +35,185 @@
 }
 
 .header > img{
-    width: 12%;
+    width: 180px;
 }
 
-.new-task{
+#btn-new-task{
     color: rgba(90, 92, 99, 1);
     display: flex;
     align-items: center;
+    font-size: 16px;
     cursor: pointer;
+    width: fit-content;
+    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+    transition: all 0.2s;
 }
 
-.new-task > i{
+#btn-new-task:hover{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+#btn-new-task > i{
     font-size: 12px;
     padding-right: 8px;
 }
 
+/*tasks*/
 .general-task{
     display: flex;
+    column-gap: 60px;
 }
 
-.general-task > div{
+.task{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     width: 350px;
+}
+
+/**/
+.col{    
+    width: 100%;
     height: 35px;
-    background-color: lightblue;
-    margin-right: 60px;
+    padding: 15px;
     border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-#todo{
-
+.todo-col{
+    background-color: rgba(0, 166, 218, 1);
 }
 
-#doing{
-
+.doing-col{
+    background-color: rgba(204, 172, 3, 0.56);
 }
 
-#completed{
-
+.completed-col{
+    background-color: rgba(59, 192, 87, 1);
 }
 
-#blocked{
-    margin-right: 0;
+.blocked-col{
+    background-color: rgba(231, 76, 60, 1);
+}
+/**/
+/**/
+.count{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.todo-col > .count{
+    background-color: rgba(0, 205, 218, 1);
+}
+
+.doing-col > .count{
+    background-color: rgba(218, 183, 0, 1);
+}
+
+.completed-col > .count{
+    background-color: rgba(105, 206, 126, 1);
+}
+
+.blocked-col > .count{
+    background-color: rgba(245, 114, 99, 0.781);
+}
+/**/
+/**/
+.line{
+    width: 100%;
+    height: 2.5px;
+    margin: 12px 0;
+}
+
+.todo-line{
+    background-color: rgba(0, 166, 218, 1);
+}
+
+.doing-line{
+    background-color: rgba(204, 172, 3, 0.56);
+}
+
+.completed-line{
+    background-color: rgba(59, 192, 87, 1);
+}
+
+.blocked-line{
+    background-color: rgba(231, 76, 60, 1);
+}
+
+/**/
+.create-todo{
+    display: none;
+    width: 32%;
+    height: fit-content;
+    background-color: white;
+    padding: 15px;
+    padding-bottom: 25px;
+    border-radius: 5px;
+    color: rgba(67, 67, 67, 0.902);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.create-todo > p{
+    text-align: center;
+    margin: 10px 0 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.create-todo > i{
+    float: right;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.create-todo > i:hover{
+    color: black;
+}
+
+.create-todo > input, .create-todo > textarea{
+    display: block;
+    width: 100%;
+    padding-left: 3px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(217, 217, 217, 1);
+    border-radius: 4px;
+    font-family: "Plus Jakarta Sans";
+    font-size: 12px;
+    line-height: 22px;
+}
+
+.create-todo > textarea{
+    min-height: 70px;
+    max-height: 70px;
+}
+
+#btn-submit{
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid rgba(217, 217, 217, 1);
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(67, 67, 67, 0.902);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#btn-submit:hover{
+    background-color: rgb(232, 229, 229, 0.8);
 }
