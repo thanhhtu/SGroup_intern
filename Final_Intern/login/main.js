@@ -1,25 +1,25 @@
-let emailInput = document.getElementById("email-input");
-let pwdInput = document.getElementById("pwd-input");
+let email_input = document.getElementById("email-input");
+let pwd_input = document.getElementById("pwd-input");
 
 function Login(){
-    //border will change red when inputs empty
-    if(emailInput.value == "" || emailInput.value == null){
-        emailInput.style.border = "1.5px solid red";
+    //border will change red when inputs are empty
+    if(email_input.value == "" || email_input.value == null){
+        email_input.style.border = "1.5px solid red";
     }
 
-    if(pwdInput.value == "" || pwdInput.value == null){
-        pwdInput.style.border = "1.5px solid red";  
+    if(pwd_input.value == "" || pwd_input.value == null){
+        pwd_input.style.border = "1.5px solid red";  
     }
 
     //fetch dummy api
     //correct_login@example.com
     //C0rr3Ct_P@55w0rd
     let infor = {
-        "login": emailInput.value,
-        "password": pwdInput.value
+        "login": email_input.value,
+        "password": pwd_input.value
     };
     
-    if(emailInput.value != "" && pwdInput.value != ""){
+    if(email_input.value != "" && email_input.value != ""){
         const url = "https://recruitment-api.pyt1.stg.jmr.pl/login";
         fetch(url, {
             method: "POST",
@@ -34,26 +34,30 @@ function Login(){
                     alert("Login successfully!")
                     window.location.href = "../work_management/index.html"
                 }else{
-                    alert("Email or passwork is not correct!");
+                    if(email_input.value == "" || pwd_input.value == ""){
+                        return false;
+                    }else{
+                        alert("Email or passwork is not correct!");
+                    }
                 }
             })
     }
 }
 
-function checkEntry(){
-    emailInput.onblur = function(){
-        if(emailInput.value != ""){
-            emailInput.style.border = "1.5px solid green"; 
+function checkEntry(){ 
+    email_input.onblur = function(){
+        if(email_input.value != ""){
+            email_input.style.border = "1.5px solid green"; 
         }else{
-            emailInput.style.borderColor = "rgb(232, 229, 229, 0.8)"; 
+            email_input.style.borderColor = "rgba(217, 217, 217, 1)"; 
         }
     }
     
-    pwdInput.onblur = function(){
-        if(pwdInput.value != ""){
-            pwdInput.style.border = "1.5px solid green"; 
+    pwd_input.onblur = function(){
+        if(pwd_input.value != ""){
+            pwd_input.style.border = "1.5px solid green"; 
         }else{
-            pwdInput.style.borderColor = "rgb(232, 229, 229, 0.8)";
+            pwd_input.style.borderColor = "rgba(217, 217, 217, 1)";
         }
     }
 }
