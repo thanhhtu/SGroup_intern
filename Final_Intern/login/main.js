@@ -38,6 +38,10 @@ function Login(){
                         return false;
                     }else{
                         alert("Email or passwork is not correct!");
+                        email_input.value = "";
+                        pwd_input.value = "";
+                        email_input.style.borderColor = "rgba(217, 217, 217, 1)";
+                        pwd_input.style.borderColor = "rgba(217, 217, 217, 1)";
                     }
                 }
             })
