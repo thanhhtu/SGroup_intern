@@ -37,7 +37,7 @@ function Login(){
                     if(!email_input.value || !pwd_input.value){
                         return false;
                     }else{
-                        alert("Email or passwork is not correct!"); //only alert incorrect when filled into 2 input completedly
+                        alert("Email or passwork is not correct!"); //only alert incorrect when filled into 2 inputs completedly
                         email_input.value = "";
                         pwd_input.value = "";
                         email_input.style.borderColor = "rgba(217, 217, 217, 1)";
