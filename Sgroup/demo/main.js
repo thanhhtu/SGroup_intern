@@ -126,7 +126,62 @@
 // arr[3] = 3;
 // console.log(arr);
 
-const originalObject = { name: 'John', age: 30 };
-const deepCopy = { ...originalObject }; //Deep copy
-deepCopy.age = 25;
-console.log(originalObject.age); //30
+// const originalObject = { name: 'John', age: 30 };
+// const deepCopy = { ...originalObject }; //Deep copy
+// deepCopy.age = 25;
+// console.log(originalObject.age); //30
+
+// function oke(){
+//     return `
+//         <div>oke</div>
+//     `
+// }
+// document.getElementById("oke").insertAdjacentHTML("afterbegin", oke())
+// document.getElementById("oke").insertAdjacentHTML("afterbegin", oke())
+// document.getElementById("oke").insertAdjacentHTML("afterbegin", oke())
+// document.getElementById("oke").removeAdjacentHTML("afterbegin", oke())
+
+// const products = ['dmitripavlutin', 'anonystick'];
+// for(const [index, product] of products.entries()){
+// 		console.log(index, product);
+// }
+/* 
+0, 'dmitripavlutin'
+1, 'anonystick'
+*/
+// for(const i of products.entries()){
+//     console.log(i);
+// }
+/*
+[ 0, 'dmitripavlutin' ]
+[ 1, 'anonystick' ]
+*/
+
+let cnt = 0;
+let arr = new Array();
+function x(){
+    return `
+        <div>oke</div>
+    `;
+}
+
+let y;
+document.getElementById("btn").addEventListener("click", function(){
+    arr[cnt++] = x();
+    console.log(arr);
+    y = arr.join(" ");
+    console.log(y);
+})
+
+document.getElementById("btn").addEventListener("click", function(){
+    document.getElementById("oke").innerHTML = y;
+})
+
+document.getElementById("okeeeeee").addEventListener("click", function(){
+    arr[3] = "";
+    arr = arr.filter((value) => value != "");
+    y = arr.join(" ");
+    document.getElementById("oke").innerHTML = y;
+})
+
+arr.length

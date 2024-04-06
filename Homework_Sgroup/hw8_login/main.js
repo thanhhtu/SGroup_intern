@@ -51,7 +51,7 @@ function Login(){
         }
     }
 
-    if(username == null || username == "" || password == undefined || password ==""){
+    if(!username| !password){
         alert("Username and password input can not be empty!");
     }else{
         if(count == 0){ //nếu count = 0 tức là không có tài khoản trong local storage
@@ -81,7 +81,7 @@ function Register(){
         }
     }
 
-    if(email == null || email == "" || username == null || username == "" || password == undefined || password ==""){
+    if(!email || !username || !password){
         alert("Email and username and password input can not be empty!");
     }else{
         if(count == 0){

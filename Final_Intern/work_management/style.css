@@ -7,7 +7,15 @@
     line-height: 22px;
 }
 
-/*fontsize: 14 và 12*/
+/*2 #btn*/
+
+body{
+    overflow: hidden;
+}
+
+image{
+    display: block;
+}
 
 .container{
     margin: 2.5%;
@@ -17,8 +25,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 1000dvh;
-    height: 10000dvw;
+    width: 100dvw; /*dynamic viewport weight: update of vw*/
+    height: 100dvh; /*dynamic viewport height: update of vh*/
     background-color: rgba(90, 92, 99, 0.5);
     z-index: 3;
 }
@@ -35,7 +43,7 @@
 }
 
 .header > img{
-    width: 180px;
+    width: 160px;
 }
 
 #btn-new-task{
@@ -64,26 +72,27 @@
 /*tasks*/
 .general-task{
     display: flex;
-    column-gap: 60px;
+    gap: 30px 20px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 .task{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    width: 350px;
+    width: 320px;
 }
 
 /**/
 .col{    
     width: 100%;
-    height: 35px;
+    height: 33px;
     padding: 15px;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
     color: white;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -111,6 +120,10 @@
     height: 20px;
     border-radius: 5px;
     text-align: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .todo-col > .count{
@@ -216,4 +229,95 @@
 
 #btn-submit:hover{
     background-color: rgb(232, 229, 229, 0.8);
+}
+
+/*changing the style of the scrollbar*/
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/*the track (progress bar) of the scrollbar*/
+/* ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+} */
+
+/*the draggable scrolling handle*/
+::-webkit-scrollbar-thumb {
+    background: rgba(183, 183, 183, 0.781);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(155, 155, 155);
+}
+
+/**/
+.list{
+    width: 100%;
+    height: 75dvh;
+    overflow: auto; /*adding scrollbars only when necessary*/
+}
+
+.note{
+    width: 99%;
+    height: 200px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    padding: 25px;
+}
+
+.icon-note{
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.icon-note > img{
+    height: 20%;
+    width: 20%;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.category-note{
+    width: 80%;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration-line: underline;
+    color: rgba(77, 142, 255, 1);
+}
+
+.title-note{
+    width: 80%;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgba(57, 57, 57, 1);
+}
+
+.line-note{
+    width: 80%;
+    border: 1px solid rgba(219, 219, 219, 1);
+    margin: 25px 0 5px;
+}
+
+.content-note{
+    width: 80%;
+    color: rgba(90, 92, 99, 1);
+    font-size: 10px;
+}
+
+.clock-note{
+    width: 80%;
+    color: rgba(90, 92, 99, 1);
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.clock-note > img{
+    height: 5%;
+    width: 5%;
+    margin-right: 5px;
 }
