@@ -8,25 +8,6 @@ let category_input = document.getElementById("category");
 let title_input = document.getElementById("title");
 let content_input = document.getElementById("content");
 
-//border will change red when inputs are empty
-function checkInputEmpty(){
-    if(!category_input.value){
-        category_input.style.border = "1.5px solid red";
-    }
-    if(!title_input.value){
-        title_input.style.border = "1.5px solid red";  
-    }
-    if(!content_input.value){
-        content_input.style.border = "1.5px solid red";  
-    }
-
-    if(!category_input.value || !title_input.value || !content_input.value){
-        return false
-    }else{
-        return true;
-    }
-}
-
 //border will change green when inputs are not empty
 function checkInputNotEmpty(){
     category_input.onblur = function(){
@@ -87,6 +68,8 @@ let arr_todo = [];
 let data_todo = localStorage.getItem("todo-task");
 if(data_todo){
     arr_todo = JSON.parse(data_todo);
+    let renderTodoList = arr_todo.map(renderTodoTask);
+    todo_list.innerHTML = renderTodoList.join(" ");
 }
 
 function renderTodoTask(value, index){
@@ -108,16 +91,20 @@ function renderTodoTask(value, index){
     `
 }
 
-let infor = {
-    category: category_input.value, 
-    title: title_input.value, 
-    content: content_input.value, 
-    time: getCurrentTime()
-};
-
 function addTodoList(){
+    //border will change red when inputs are empty
+    if(!category_input.value){
+        category_input.style.border = "1.5px solid red";
+    }
+    if(!title_input.value){
+        title_input.style.border = "1.5px solid red";  
+    }
+    if(!content_input.value){
+        content_input.style.border = "1.5px solid red";  
+    }
+    
     //only do when filled into all inputs
-    if(checkInputEmpty()){
+    if(category_input.value && title_input.value && content_input.value){
         let infor = {
             category: category_input.value, 
             title: title_input.value, 
@@ -133,15 +120,14 @@ function addTodoList(){
         count_todo.innerHTML = arr_todo.length;
     
         //render to html
-        let renderTodoList = arr_todo.map(renderTodoTask);
+        renderTodoList = arr_todo.map(renderTodoTask);
         todo_list.innerHTML = renderTodoList.join(" ");
     
-        console.log(category_input.value)
-    }else{
-        return false;
+        //after submit, the create-todo popup closes
+        create_todo.classList.toggle("active");
+        bgr_popup.classList.toggle("bgr-popup");
     }
 }
-
 
 document.addEventListener("DOMContentLoaded", function(){
     //open create-todo popup
@@ -151,10 +137,8 @@ document.addEventListener("DOMContentLoaded", function(){
     exit_create_todo.addEventListener("click", openOrCloseCreateTodo);
     bgr_popup.addEventListener('click', openOrCloseCreateTodo);
 
-    //submit create-todo button
+    //submit create-todo 
     checkInputNotEmpty();
-    btn_submit.addEventListener("click", checkInputEmpty);
-
     btn_submit.addEventListener("click", addTodoList);
 });
 
