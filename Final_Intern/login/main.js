@@ -3,11 +3,11 @@ let pwd_input = document.getElementById("pwd-input");
 
 function Login(){
     //border will change red when inputs are empty
-    if(email_input.value == "" || email_input.value == null){
+    if(!email_input.value){
         email_input.style.border = "1.5px solid red";
     }
 
-    if(pwd_input.value == "" || pwd_input.value == null){
+    if(!pwd_input.value){
         pwd_input.style.border = "1.5px solid red";  
     }
 
@@ -19,7 +19,7 @@ function Login(){
         "password": pwd_input.value
     };
     
-    if(email_input.value != "" && email_input.value != ""){
+    if(email_input.value && email_input.value){
         const url = "https://recruitment-api.pyt1.stg.jmr.pl/login";
         fetch(url, {
             method: "POST",
@@ -32,12 +32,12 @@ function Login(){
             .then(data => {
                 if(data.message === "Hello 😉! How are you?" &&  data.status === "ok"){
                     alert("Login successfully!")
-                    window.location.href = "../work_management/index.html"
+                    window.location.replace("../work_management/index.html"); //Switch pages in the same tab, cannot back to login page (assign có thể back vê trang login)
                 }else{
-                    if(email_input.value == "" || pwd_input.value == ""){
+                    if(!email_input.value || !pwd_input.value){
                         return false;
                     }else{
-                        alert("Email or passwork is not correct!");
+                        alert("Email or passwork is not correct!"); //only alert incorrect when filled into 2 input completedly
                         email_input.value = "";
                         pwd_input.value = "";
                         email_input.style.borderColor = "rgba(217, 217, 217, 1)";
@@ -50,7 +50,7 @@ function Login(){
 
 function checkEntry(){ 
     email_input.onblur = function(){
-        if(email_input.value != ""){
+        if(email_input.value){
             email_input.style.border = "1.5px solid green"; 
         }else{
             email_input.style.borderColor = "rgba(217, 217, 217, 1)"; 
@@ -58,7 +58,7 @@ function checkEntry(){
     }
     
     pwd_input.onblur = function(){
-        if(pwd_input.value != ""){
+        if(pwd_input.value){
             pwd_input.style.border = "1.5px solid green"; 
         }else{
             pwd_input.style.borderColor = "rgba(217, 217, 217, 1)";
