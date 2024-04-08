@@ -166,7 +166,7 @@ image{
 }
 
 /**/
-.create-todo{
+.create-todo, .edit-todo{
     display: none;
     width: 32%;
     height: fit-content;
@@ -182,24 +182,24 @@ image{
     z-index: 5;
 }
 
-.create-todo > p{
+.create-todo > p, .edit-todo > p{
     text-align: center;
     margin: 10px 0 15px;
     font-size: 20px;
     font-weight: 600;
 }
 
-.create-todo > i{
+.create-todo > i, .edit-todo > i{
     float: right;
     cursor: pointer;
     transition: all 0.2s;
 }
 
-.create-todo > i:hover{
+.create-todo > i:hover, .edit-todo > i:hover{
     color: black;
 }
 
-.create-todo > input, .create-todo > textarea{
+.create-todo > input, .create-todo > textarea, .edit-todo > input, .edit-todo > textarea{
     display: block;
     width: 100%;
     padding-left: 3px;
@@ -211,12 +211,13 @@ image{
     line-height: 22px;
 }
 
-.create-todo > textarea{
+.create-todo > textarea, .edit-todo > textarea{
     min-height: 70px;
     max-height: 70px;
+    width: 100%;
 }
 
-#btn-submit{
+.btn-submit{
     width: 100%;
     border-radius: 4px;
     border: 1px solid rgba(217, 217, 217, 1);
@@ -227,7 +228,7 @@ image{
     transition: all 0.2s;
 }
 
-#btn-submit:hover{
+.btn-submit:hover{
     background-color: rgb(232, 229, 229, 0.8);
 }
 
@@ -235,11 +236,6 @@ image{
 ::-webkit-scrollbar {
     width: 8px;
 }
-
-/*the track (progress bar) of the scrollbar*/
-/* ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-} */
 
 /*the draggable scrolling handle*/
 ::-webkit-scrollbar-thumb {
@@ -320,4 +316,10 @@ image{
     height: 5%;
     width: 5%;
     margin-right: 5px;
+}
+
+.state{
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0 5px;
 }
