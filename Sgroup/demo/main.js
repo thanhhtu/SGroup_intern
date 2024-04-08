@@ -157,31 +157,31 @@
 [ 1, 'anonystick' ]
 */
 
-let cnt = 0;
-let arr = new Array();
-function x(){
-    return `
-        <div>oke</div>
-    `;
-}
+// let cnt = 0;
+// let arr = new Array();
+// function x(){
+//     return `
+//         <div>oke</div>
+//     `;
+// }
 
-let y;
-document.getElementById("btn").addEventListener("click", function(){
-    arr[cnt++] = x();
-    console.log(arr);
-    y = arr.join(" ");
-    console.log(y);
-})
+// let y;
+// document.getElementById("btn").addEventListener("click", function(){
+//     arr[cnt++] = x();
+//     console.log(arr);
+//     y = arr.join(" ");
+//     console.log(y);
+// })
 
-document.getElementById("btn").addEventListener("click", function(){
-    document.getElementById("oke").innerHTML = y;
-})
+// document.getElementById("btn").addEventListener("click", function(){
+//     document.getElementById("oke").innerHTML = y;
+// })
 
-document.getElementById("okeeeeee").addEventListener("click", function(){
-    arr[3] = "";
-    arr = arr.filter((value) => value != "");
-    y = arr.join(" ");
-    document.getElementById("oke").innerHTML = y;
-})
+// document.getElementById("okeeeeee").addEventListener("click", function(){
+//     arr[3] = "";
+//     arr = arr.filter((value) => value != "");
+//     y = arr.join(" ");
+//     document.getElementById("oke").innerHTML = y;
+// })
 
-arr.length
+// arr.length
