@@ -64,16 +64,18 @@ function getCurrentTime(){
     return `${month} ${day}, ${year}`;
 }
 
-//reset state when open or close create-todo popup
-function openOrCloseCreateTodo(){
-    bgr_popup.addEventListener('click', () => {
-        bgr_popup.classList.remove("bgr-popup");
-        create_todo.classList.remove("active");
-    }); //close when enter outside popup
-    bgr_popup.classList.toggle("bgr-popup");
+function openOrClose(bgr, popup){
+    bgr.classList.toggle("bgr-popup");
+    popup.classList.toggle("active");
 
-    create_todo.classList.toggle("active");
-    
+    bgr.addEventListener('click', () => {
+        bgr.classList.remove("bgr-popup");
+        popup.classList.remove("active");
+    });
+}
+
+//reset state when open or close create-todo popup
+function resetCreateTodo(){
     category.value = "";
     title.value = "";
     content.value = "";
@@ -82,6 +84,24 @@ function openOrCloseCreateTodo(){
     title.style.borderColor = "rgba(217, 217, 217, 1)";
     content.style.borderColor = "rgba(217, 217, 217, 1)";
 }
+
+document.addEventListener("DOMContentLoaded", function(){
+    //open create-todo popup
+    btn_newTask.addEventListener("click", function(){
+        openOrClose(bgr_popup, create_todo);
+        resetCreateTodo();
+    });
+
+    //close create-todo popup
+    exit_create.addEventListener("click", function(){
+        openOrClose(bgr_popup, create_todo);
+        resetCreateTodo();
+    });
+
+    //submit create-todo + create todo list
+    checkInputNotEmpty(category, title, content);
+    btn_submit.addEventListener("click", addTodo);
+});
 
 ///////////////////////////////////////////////////////////////////////
 
@@ -168,36 +188,57 @@ function delTodo(index_del){
 
 //edit todo task
 function editTodo(index_edit){
-    checkInputNotEmpty(edit_category, edit_title, edit_content);
+    //open
+    bgr_popup.classList.toggle("bgr-popup");
+    edit_todo.classList.toggle("active");
 
+    //close
+    exit_edit.addEventListener("click", (e) => {
+        bgr_popup.classList.remove("bgr-popup");
+        edit_todo.classList.remove("active");
+    });
     bgr_popup.addEventListener('click', () => {
         bgr_popup.classList.remove("bgr-popup");
         edit_todo.classList.remove("active");
     });
-
-    bgr_popup.classList.toggle("bgr-popup");
-    edit_todo.classList.toggle("active");
     
     if(edit_todo.classList.contains("active")){
         edit_category.value = arr_todo[index_edit].category;
         edit_title.value = arr_todo[index_edit].title;
         edit_content.value = arr_todo[index_edit].content;
+
+        edit_category.style.borderColor = "rgba(217, 217, 217, 1)";
+        edit_title.style.borderColor = "rgba(217, 217, 217, 1)";
+        edit_content.style.borderColor = "rgba(217, 217, 217, 1)";
     }
     
-    
-    exit_edit.addEventListener("click", editTodo);
+    edit_btn.addEventListener("click", (e) => {
+        checkInputNotEmpty(edit_category, edit_title, edit_content);
+        edit(index_edit);
+    });
 }
 
-document.addEventListener("DOMContentLoaded", function(){
-    //open create-todo popup
-    btn_newTask.addEventListener("click", openOrCloseCreateTodo);
+function edit(e, index_edit){
+    checkInputEmpty(edit_category, edit_title, edit_content);
+    console.log("a")
+    
+    if(edit_category.value && edit_title.value && edit_content.value){
+        let infor = {
+            category: edit_category.value, 
+            title: edit_title.value, 
+            content: edit_content.value, 
+            time: getCurrentTime()
+        };
+    
+        arr_todo.splice(index_edit, 1, infor);
 
-    //close create-todo popup
-    exit_create.addEventListener("click", openOrCloseCreateTodo);
+        localStorage.setItem("todo-list", JSON.stringify(arr_todo));
+        render_todo_list = arr_todo.map(renderTodo);
+        todo_list.innerHTML = render_todo_list.join(" ");
 
-
-    //submit create-todo + create todo list
-    checkInputNotEmpty(category, title, content);
-    btn_submit.addEventListener("click", addTodo);
-});
+        //close
+        bgr_popup.classList.remove("bgr-popup");
+        edit_todo.classList.remove("active");
+    }
+}
 
