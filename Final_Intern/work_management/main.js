@@ -318,7 +318,7 @@ function edit(i_edit, pre_state){
     }
 
     console.log(state_edit === pre_state)
-    //delete task in old list before change this task to new list
+    //edit task in the same state
     if(state_edit === pre_state){
         if(state_edit === "todo"){
             arr_todo.splice(i_edit, 1, infor);
@@ -334,6 +334,7 @@ function edit(i_edit, pre_state){
             localStorage.setItem("doing-list", JSON.stringify(arr_blocked));
         }
     }else{
+        //delete task in old list
         if(pre_state === "todo"){
             arr_todo.splice(i_edit, 1);
             localStorage.setItem("todo-list", JSON.stringify(arr_todo));
@@ -348,7 +349,7 @@ function edit(i_edit, pre_state){
             localStorage.setItem("blocked-list", JSON.stringify(arr_blocked));
         }
     
-        //add new task to new list + update time 
+        //add task to new list
         if(state_edit === "todo"){
             arr_todo.push(infor);
             localStorage.setItem("todo-list", JSON.stringify(arr_todo));
