@@ -317,36 +317,53 @@ function edit(i_edit, pre_state){
         state_edit = "blocked";
     }
 
+    console.log(state_edit === pre_state)
     //delete task in old list before change this task to new list
-    if(pre_state === "todo"){
-        arr_todo.splice(i_edit, 1);
-        localStorage.setItem("todo-list", JSON.stringify(arr_todo));
-    }else if(pre_state === "doing"){
-        arr_doing.splice(i_edit, 1);
-        localStorage.setItem("doing-list", JSON.stringify(arr_doing));
-    }else if(pre_state === "completed"){
-        arr_completed.splice(i_edit, 1);
-        localStorage.setItem("completed-list", JSON.stringify(arr_completed));
-    }else if(pre_state === "blocked"){
-        arr_blocked.splice(i_edit, 1);
-        localStorage.setItem("blocked-list", JSON.stringify(arr_blocked));
+    if(state_edit === pre_state){
+        if(state_edit === "todo"){
+            arr_todo.splice(i_edit, 1, infor);
+            localStorage.setItem("todo-list", JSON.stringify(arr_todo));
+        }else if(state_edit === "doing"){
+            arr_doing.splice(i_edit, 1, infor);
+            localStorage.setItem("doing-list", JSON.stringify(arr_doing));
+        }else if(state_edit === "completed"){
+            arr_completed.splice(i_edit, 1, infor);
+            localStorage.setItem("doing-list", JSON.stringify(arr_completed));
+        }else if(state_edit === "blocked"){
+            arr_blocked.splice(i_edit, 1, infor);
+            localStorage.setItem("doing-list", JSON.stringify(arr_blocked));
+        }
+    }else{
+        if(pre_state === "todo"){
+            arr_todo.splice(i_edit, 1);
+            localStorage.setItem("todo-list", JSON.stringify(arr_todo));
+        }else if(pre_state === "doing"){
+            arr_doing.splice(i_edit, 1);
+            localStorage.setItem("doing-list", JSON.stringify(arr_doing));
+        }else if(pre_state === "completed"){
+            arr_completed.splice(i_edit, 1);
+            localStorage.setItem("completed-list", JSON.stringify(arr_completed));
+        }else if(pre_state === "blocked"){
+            arr_blocked.splice(i_edit, 1);
+            localStorage.setItem("blocked-list", JSON.stringify(arr_blocked));
+        }
+    
+        //add new task to new list + update time 
+        if(state_edit === "todo"){
+            arr_todo.push(infor);
+            localStorage.setItem("todo-list", JSON.stringify(arr_todo));
+        }else if(state_edit === "doing"){
+            arr_doing.push(infor);
+            localStorage.setItem("doing-list", JSON.stringify(arr_doing));
+        }else if(state_edit === "completed"){    
+            arr_completed.push(infor);
+            localStorage.setItem("completed-list", JSON.stringify(arr_completed));
+        }else if(state_edit === "blocked"){    
+            arr_blocked.push(infor);
+            localStorage.setItem("blocked-list", JSON.stringify(arr_blocked));
+        }
     }
-
-    //add new task to new list + update time 
-    if(state_edit === "todo"){
-        arr_todo.push(infor);
-        localStorage.setItem("todo-list", JSON.stringify(arr_todo));
-    }else if(state_edit === "doing"){
-        arr_doing.push(infor);
-        localStorage.setItem("doing-list", JSON.stringify(arr_doing));
-    }else if(state_edit === "completed"){    
-        arr_completed.push(infor);
-        localStorage.setItem("completed-list", JSON.stringify(arr_completed));
-    }else if(state_edit === "blocked"){    
-        arr_blocked.push(infor);
-        localStorage.setItem("blocked-list", JSON.stringify(arr_blocked));
-    }
-
+    
     render();
 }
 

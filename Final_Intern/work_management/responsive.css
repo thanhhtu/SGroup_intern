@@ -13,6 +13,10 @@
         overflow: visible;
     }
 
+    .container{
+        margin: 27px;
+    }
+    
     .task{
         width: 45%;
     }
@@ -20,15 +24,47 @@
     .list{
         height: 33dvh;
     }
+
+    .create-todo, .edit-todo{
+        width: 45%;
+    }
+
+    .note{
+        height: 160px;
+        margin-bottom: 20px;
+        padding: 15px;
+    }
 }
 
 @media only screen and (max-width: 991.98px){
-
+    .create-todo, .edit-todo{
+        width: 50%;
+    }
 }
 
 @media only screen and (max-width: 767.98px){
+    .header{
+        flex-direction: column;
+    }
+
+    #btn-new-task{
+        margin-bottom: 20px;
+    }
+
     .task{
         width: 100%;
+    }
+
+    .create-todo, .edit-todo{
+        width: 70%;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .note{
+        height: 150px;
     }
 }
 
