@@ -1,12 +1,45 @@
 let btn_newTask = document.getElementById("btn-new-task");
 let bgr_popup = document.querySelector(".bgr");
 
+//create-todo popup input
 let create_todo = document.querySelector(".create-todo");
 let category = document.querySelector(".create-todo > .category");
 let title = document.querySelector(".create-todo > .title");
 let content = document.querySelector(".create-todo > .content");
 let btn_submit = document.querySelector(".create-todo > .btn-submit");
 let exit_create = document.getElementById("exit-create");
+
+//task input
+let category_note = document.querySelector(".category-note");
+let title_note = document.querySelector(".title-note");
+let content_note = document.querySelector(".content-note");
+let currentTime = document.querySelector(".time");
+
+//task list
+let todo_list = document.querySelector(".todo-list");
+let doing_list = document.querySelector(".doing-list");
+let completed_list = document.querySelector(".completed-list");
+let blocked_list = document.querySelector(".blocked-list");
+
+//edit-todo popup input
+let edit_todo = document.querySelector(".edit-todo");
+let edit_category = document.querySelector(".edit-todo > .category");
+let edit_title = document.querySelector(".edit-todo > .title");
+let edit_content = document.querySelector(".edit-todo > .content");
+let edit_btn = document.querySelector(".edit-todo > .btn-submit");
+let exit_edit = document.getElementById("exit-edit");
+
+//state of task
+let todo_tick = document.getElementById("todo-tick");
+let doing_tick = document.getElementById("doing-tick");
+let completed_tick = document.getElementById("completed-tick");
+let blocked_tick = document.getElementById("blocked-tick");
+
+//number of tasks in list
+let count_todo = document.querySelector(".count-todo");
+let count_doing = document.querySelector(".count-doing");
+let count_completed = document.querySelector(".count-completed");
+let count_blocked = document.querySelector(".count-blocked");
 
 //border will change green when inputs are not empty
 function checkInputNotEmpty(input1, input2, input3){
@@ -46,15 +79,6 @@ function checkInputEmpty(input1, input2, input3){
     }
 }
 
-//get current time
-function getCurrentTime(){
-    let dt = new Date();
-    let month = dt.toLocaleString('en-US', { month: 'long' }); //toLocaleString method with the options { month: 'long' } to get the full name of the month
-    let day = dt.getDate();
-    let year = dt.getFullYear();
-    return `${month} ${day}, ${year}`;
-}
-
 function openOrClose(bgr, popup){
     bgr.classList.toggle("bgr-popup");
     popup.classList.toggle("active");
@@ -76,47 +100,30 @@ function resetCreateTodo(){
     content.style.borderColor = "rgba(217, 217, 217, 1)";
 }
 
-//popup input
-let category_note = document.querySelector(".category-note");
-let title_note = document.querySelector(".title-note");
-let content_note = document.querySelector(".content-note");
-let currentTime = document.querySelector(".time");
+//get current time
+function getCurrentTime(){
+    let dt = new Date();
+    let month = dt.toLocaleString('en-US', { month: 'long' }); //toLocaleString method with the options { month: 'long' } to get the full name of the month
+    let day = dt.getDate();
+    let year = dt.getFullYear();
+    return `${month} ${day}, ${year}`;
+}
 
-let todo_list = document.querySelector(".todo-list");
-let doing_list = document.querySelector(".doing-list");
-let completed_list = document.querySelector(".completed-list");
-let blocked_list = document.querySelector(".blocked-list");
-
-//set todo array from local storage
-let arr_todo = [];
+//connect to local storage
 let data_todo = localStorage.getItem("todo-list");
-if(data_todo){
-    arr_todo = JSON.parse(data_todo);
-}
+let arr_todo = JSON.parse(data_todo) || [];
 
-let arr_doing = [];
 let data_doing = localStorage.getItem("doing-list");
-if(data_doing){
-    arr_doing = JSON.parse(data_doing);
-}
+let arr_doing = JSON.parse(data_doing) || [];
 
-let arr_completed = [];
 let data_completed = localStorage.getItem("completed-list");
-if(data_completed){
-    arr_completed = JSON.parse(data_completed);
-}
+let arr_completed = JSON.parse(data_completed) || [];
 
-let arr_blocked = [];
 let data_blocked = localStorage.getItem("blocked-list");
-if(data_blocked){
-    arr_blocked = JSON.parse(data_blocked);
-}
+let arr_blocked = JSON.parse(data_blocked) || [];
 
-renderList();
-renderNum();
-
-//render list
-function renderList(){
+//render to html -> render in one time to make sense all list
+function render(){
     //todo list
     let todo = arr_todo.map((value, index) => {
         return `
@@ -200,15 +207,8 @@ function renderList(){
         `
     })
     blocked_list.innerHTML = blocked.join("");
-}
 
-//render number of tasks in list
-function renderNum(){
-    let count_todo = document.querySelector(".count-todo");
-    let count_doing = document.querySelector(".count-doing");
-    let count_completed = document.querySelector(".count-completed");
-    let count_blocked = document.querySelector(".count-blocked");
-
+    //render number
     count_todo.innerHTML = arr_todo.length;
     count_doing.innerHTML = arr_doing.length;
     count_completed.innerHTML = arr_completed.length;
@@ -221,7 +221,6 @@ function addTodo(){
     
     //only do when filled into all inputs
     if(category.value && title.value && content.value){
-
         let infor = {
             category: category.value, 
             title: title.value, 
@@ -233,8 +232,7 @@ function addTodo(){
         arr_todo.push(infor);
         localStorage.setItem("todo-list", JSON.stringify(arr_todo));
 
-        renderList();
-        renderNum();
+        render();
 
         //after submit, the create-todo popup closes
         create_todo.classList.remove("active");
@@ -258,27 +256,8 @@ function delTask(index_del, state){
         localStorage.setItem("blocked-list", JSON.stringify(arr_blocked));
     }
 
-    renderList();
-    renderNum();
+    render();
 }
-
-function del(index, data, arr){
-    arr.splice(index, 1);
-    localStorage.setItem(data, JSON.stringify(arr));
-}
-
-let todo_tick = document.getElementById("todo-tick");
-let doing_tick = document.getElementById("doing-tick");
-let completed_tick = document.getElementById("completed-tick");
-let blocked_tick = document.getElementById("blocked-tick");
-
-//edit todo tast
-let edit_todo = document.querySelector(".edit-todo");
-let edit_category = document.querySelector(".edit-todo > .category");
-let edit_title = document.querySelector(".edit-todo > .title");
-let edit_content = document.querySelector(".edit-todo > .content");
-let edit_btn = document.querySelector(".edit-todo > .btn-submit");
-let exit_edit = document.getElementById("exit-edit");
 
 let pre_state;
 let i_edit;
@@ -293,13 +272,12 @@ function editTask(index_edit, state){
     edit_title.style.borderColor = "rgba(217, 217, 217, 1)";
     edit_content.style.borderColor = "rgba(217, 217, 217, 1)";
 
-    //set value before change
+    //set state before change
     pre_state = state;
     i_edit = index_edit;
     
     //set value edit popup
     let task = {};
-    
     if(state === "todo"){
         task = arr_todo[index_edit];
         todo_tick.checked = true;
@@ -314,7 +292,6 @@ function editTask(index_edit, state){
         blocked_tick.checked = true;
     }
 
-    console.log("oke")
     edit_category.value = task.category;
     edit_title.value = task.title;
     edit_content.value = task.content;
@@ -340,7 +317,6 @@ function edit(i_edit, pre_state){
         state_edit = "blocked";
     }
 
-    
     //delete task in old list before change this task to new list
     if(pre_state === "todo"){
         arr_todo.splice(i_edit, 1);
@@ -371,11 +347,12 @@ function edit(i_edit, pre_state){
         localStorage.setItem("blocked-list", JSON.stringify(arr_blocked));
     }
 
-    renderList();
-    renderNum();
+    render();
 }
 
 document.addEventListener("DOMContentLoaded", function(){
+    render(); //render to html
+
     //open create-todo popup
     btn_newTask.addEventListener("click", function(){
         openOrClose(bgr_popup, create_todo);
@@ -392,7 +369,6 @@ document.addEventListener("DOMContentLoaded", function(){
     checkInputNotEmpty(category, title, content);
     btn_submit.addEventListener("click", addTodo);
 
-
     //close edit todo
     exit_edit.addEventListener("click", () => {
         bgr_popup.classList.remove("bgr-popup");
@@ -406,8 +382,13 @@ document.addEventListener("DOMContentLoaded", function(){
     //save edit
     checkInputNotEmpty(edit_category, edit_title, edit_content);
     edit_btn.addEventListener("click", () => {
-        edit(i_edit, pre_state);
-        bgr_popup.classList.remove("bgr-popup");
-        edit_todo.classList.remove("active");
+        checkInputEmpty(edit_category, edit_title, edit_content);
+        if(edit_category.value && edit_title.value && edit_content.value){
+            edit(i_edit, pre_state);
+
+            //close edit popup
+            bgr_popup.classList.remove("bgr-popup");
+            edit_todo.classList.remove("active");
+        }
     })
 });
