@@ -3,7 +3,7 @@
         column-gap: 10px;
     }
 
-    .task{
+    .task-list{
         width: 270px;
     }
 }
@@ -17,7 +17,7 @@
         margin: 27px;
     }
     
-    .task{
+    .task-list{
         width: 45%;
     }
 
@@ -30,7 +30,7 @@
         position: fixed;
     }
 
-    .note{
+    .task{
         height: 160px;
         margin-bottom: 20px;
         padding: 15px;
@@ -52,7 +52,7 @@
         margin-bottom: 20px;
     }
 
-    .task{
+    .task-list{
         width: 100%;
     }
 
@@ -60,7 +60,7 @@
         width: 70%;
     }
 
-    .note{
+    .task{
         height: 150px;
     }
 }

@@ -10,9 +10,9 @@ let btn_submit = document.querySelector(".create-todo > .btn-submit");
 let exit_create = document.getElementById("exit-create");
 
 //task input
-let category_note = document.querySelector(".category-note");
-let title_note = document.querySelector(".title-note");
-let content_note = document.querySelector(".content-note");
+let category_task = document.querySelector(".category-task");
+let title_task = document.querySelector(".title-task");
+let content_task = document.querySelector(".content-task");
 let currentTime = document.querySelector(".time");
 
 //task list
@@ -127,16 +127,16 @@ function render(){
     //todo list
     let todo = arr_todo.map((value, index) => {
         return `
-            <div class="note">
-                <div class="icon-note">
+            <div class="task" draggable="true">
+                <div class="icon-task">
                     <img src="../image/editIcon.png" alt="icon edit" class="icon-edit" onclick="editTask(${index}, 'todo')">
                     <img src="../image/deleteIcon.png" alt="icon delete" class="icon-delete" onclick="delTask(${index}, 'todo')">
                 </div>
-                <div class="category-note">${value.category}</div>
-                <div class="title-note">${value.title}</div>
-                <div class="line-note"></div>
-                <div class="content-note">${value.content}</div>
-                <div class="clock-note">
+                <div class="category-task">${value.category}</div>
+                <div class="title-task">${value.title}</div>
+                <div class="line-task"></div>
+                <div class="content-task">${value.content}</div>
+                <div class="clock-task">
                     <img src="../image/clockIcon.png" alt="icon clock" class="icon-clock">
                     <p class="time">${value.time}</p>
                 </div>
@@ -148,16 +148,16 @@ function render(){
     //doing list
     let doing = arr_doing.map((value, index) => {
         return `
-            <div class="note">
-                <div class="icon-note">
+            <div class="task" draggable="true">
+                <div class="icon-task">
                     <img src="../image/editIcon.png" alt="icon edit" class="icon-edit" onclick="editTask(${index}, 'doing')">
                     <img src="../image/deleteIcon.png" alt="icon delete" class="icon-delete" onclick="delTask(${index}, 'doing')">
                 </div>
-                <div class="category-note">${value.category}</div>
-                <div class="title-note">${value.title}</div>
-                <div class="line-note"></div>
-                <div class="content-note">${value.content}</div>
-                <div class="clock-note">
+                <div class="category-task">${value.category}</div>
+                <div class="title-task">${value.title}</div>
+                <div class="line-task"></div>
+                <div class="content-task">${value.content}</div>
+                <div class="clock-task">
                     <img src="../image/clockIcon.png" alt="icon clock" class="icon-clock">
                     <p class="time">${value.time}</p>
                 </div>
@@ -169,16 +169,16 @@ function render(){
     //completed list
     let completed = arr_completed.map((value, index) => {
         return `
-            <div class="note">
-                <div class="icon-note">
+            <div class="task" draggable="true">
+                <div class="icon-task">
                     <img src="../image/editIcon.png" alt="icon edit" class="icon-edit" onclick="editTask(${index}, 'completed')">
                     <img src="../image/deleteIcon.png" alt="icon delete" class="icon-delete" onclick="delTask(${index}, 'completed')">
                 </div>
-                <div class="category-note">${value.category}</div>
-                <div class="title-note">${value.title}</div>
-                <div class="line-note"></div>
-                <div class="content-note">${value.content}</div>
-                <div class="clock-note">
+                <div class="category-task">${value.category}</div>
+                <div class="title-task">${value.title}</div>
+                <div class="line-task"></div>
+                <div class="content-task">${value.content}</div>
+                <div class="clock-task">
                     <img src="../image/clockIcon.png" alt="icon clock" class="icon-clock">
                     <p class="time">${value.time}</p>
                 </div>
@@ -190,16 +190,16 @@ function render(){
     //blocked list
     let blocked = arr_blocked.map((value, index) => {
         return `
-            <div class="note">
-                <div class="icon-note">
+            <div class="task" draggable="true">
+                <div class="icon-task">
                     <img src="../image/editIcon.png" alt="icon edit" class="icon-edit" onclick="editTask(${index}, 'blocked')">
                     <img src="../image/deleteIcon.png" alt="icon delete" class="icon-delete" onclick="delTask(${index}, 'blocked')">
                 </div>
-                <div class="category-note">${value.category}</div>
-                <div class="title-note">${value.title}</div>
-                <div class="line-note"></div>
-                <div class="content-note">${value.content}</div>
-                <div class="clock-note">
+                <div class="category-task">${value.category}</div>
+                <div class="title-task">${value.title}</div>
+                <div class="line-task"></div>
+                <div class="content-task">${value.content}</div>
+                <div class="clock-task">
                     <img src="../image/clockIcon.png" alt="icon clock" class="icon-clock">
                     <p class="time">${value.time}</p>
                 </div>
@@ -328,10 +328,10 @@ function edit(i_edit, pre_state){
             localStorage.setItem("doing-list", JSON.stringify(arr_doing));
         }else if(state_edit === "completed"){
             arr_completed.splice(i_edit, 1, infor);
-            localStorage.setItem("doing-list", JSON.stringify(arr_completed));
+            localStorage.setItem("completed-list", JSON.stringify(arr_completed));
         }else if(state_edit === "blocked"){
             arr_blocked.splice(i_edit, 1, infor);
-            localStorage.setItem("doing-list", JSON.stringify(arr_blocked));
+            localStorage.setItem("blocked-list", JSON.stringify(arr_blocked));
         }
     }else{
         //delete task in old list
@@ -402,11 +402,132 @@ document.addEventListener("DOMContentLoaded", function(){
     edit_btn.addEventListener("click", () => {
         checkInputEmpty(edit_category, edit_title, edit_content);
         if(edit_category.value && edit_title.value && edit_content.value){
-            edit(i_edit, pre_state);
+            edit(i_edit, pre_state); //i_edit, pre_state were assigned at editTask()
 
             //close edit popup
             bgr_popup.classList.remove("bgr-popup");
             edit_todo.classList.remove("active");
         }
     })
+
+    dragAndDrop();
 });
+
+////////////////////Drag & Drop//////////////////////
+
+function dragAndDrop(){
+    let lists = document.querySelectorAll(".list");
+
+    document.addEventListener("dragstart", (e) => {
+        e.target.classList.add("is-dragging");
+    })
+
+    document.addEventListener("dragend", (e) => {
+        e.target.classList.remove("is-dragging");
+    })
+    
+    lists.forEach((list) => {
+        list.addEventListener("dragover", (e) => {
+            e.preventDefault();
+        })
+
+        list.addEventListener("drop", (e) => {
+            e.preventDefault();
+
+            let selected = document.querySelector(".is-dragging");
+            if(selected){
+                list.appendChild(selected);
+                saveList();
+            }
+        })
+    })
+}
+
+function saveList(){
+    //save todo list
+    let tmp_arr_todo = [];
+    let todo_tasks = document.querySelectorAll(".todo-list > .task");
+    for(let task of todo_tasks){
+        let category = task.querySelector(".category-task").innerText;
+        let title = task.querySelector(".title-task").innerText;
+        let content = task.querySelector(".content-task").innerText;
+        let time = task.querySelector(".time").innerText;
+
+        let infor = {
+            category: category, 
+            title: title, 
+            content: content, 
+            time: time
+        };
+        tmp_arr_todo.push(infor);
+    }
+    arr_todo.splice(0, arr_todo.length);
+    arr_todo = tmp_arr_todo.concat();
+    localStorage.setItem("todo-list", JSON.stringify(arr_todo));
+
+    //save doing list
+    let tmp_arr_doing = [];
+    let doing_tasks = document.querySelectorAll(".doing-list > .task");
+    for(let task of doing_tasks){
+        let category = task.querySelector(".category-task").innerText;
+        let title = task.querySelector(".title-task").innerText;
+        let content = task.querySelector(".content-task").innerText;
+        let time = task.querySelector(".time").innerText;
+
+        let infor = {
+            category: category, 
+            title: title, 
+            content: content, 
+            time: time
+        };
+        tmp_arr_doing.push(infor);
+    }
+    arr_doing.splice(0, arr_doing.length);
+    arr_doing = tmp_arr_doing.concat();
+    localStorage.setItem("doing-list", JSON.stringify(arr_doing));
+
+    //save completed list
+    let tmp_arr_completed = [];
+    let completed_tasks = document.querySelectorAll(".completed-list > .task");
+    for(let task of completed_tasks){
+        let category = task.querySelector(".category-task").innerText;
+        let title = task.querySelector(".title-task").innerText;
+        let content = task.querySelector(".content-task").innerText;
+        let time = task.querySelector(".time").innerText;
+
+        let infor = {
+            category: category, 
+            title: title, 
+            content: content, 
+            time: time
+        };
+        tmp_arr_completed.push(infor);
+    }
+    arr_completed.splice(0, arr_completed.length);
+    arr_completed = tmp_arr_completed.concat();
+    localStorage.setItem("completed-list", JSON.stringify(arr_completed));
+
+    //save blocked list
+    let tmp_arr_blocked = [];
+    let blocked_tasks = document.querySelectorAll(".blocked-list > .task");
+    for(let task of blocked_tasks){
+        let category = task.querySelector(".category-task").innerText;
+        let title = task.querySelector(".title-task").innerText;
+        let content = task.querySelector(".content-task").innerText;
+        let time = task.querySelector(".time").innerText;
+
+        let infor = {
+            category: category, 
+            title: title, 
+            content: content, 
+            time: time
+        };
+        tmp_arr_blocked.push(infor);
+    }
+    arr_blocked.splice(0, arr_blocked.length);
+    arr_blocked = tmp_arr_blocked.concat();
+    localStorage.setItem("blocked-list", JSON.stringify(arr_blocked));
+
+    render();
+}
+
